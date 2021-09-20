@@ -1,4 +1,4 @@
-const url = 'https://localhost:4000/listings';
+const url = 'http://localhost:4000/listings';
 
 class ListingModel {
     static all() {
@@ -18,4 +18,4 @@ class ListingModel {
 
 }
 
-export default ListingModel
+export default ListingModel;
