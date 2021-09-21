@@ -25,6 +25,8 @@ class ListingModel {
                 console.log(err)
             })
     }
+
+    //this will be my show route for a single listing
     
 
 
