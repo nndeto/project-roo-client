@@ -1,8 +1,16 @@
+import { Link } from "react-router-dom"
+
 function Listing(props) {
-    console.log(props)
+    // console.log(props)
     return (
         <div>
-            <h4>I'm gonna hold a single listing</h4>
+            <Link>
+                <p>{props.cityObj.title}</p>
+            </Link>
+            <p>{props.cityObj.description}</p>
+            <p>$ {props.cityObj.price}</p>
+            <p>{props.cityObj.street_address} {props.cityObj.city}, {props.cityObj.state} </p>
+            <p>{props.cityObj.pictures}</p>
         </div>
     )
 }

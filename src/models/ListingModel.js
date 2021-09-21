@@ -12,8 +12,20 @@ class ListingModel {
             .catch((err) => {
                 console.log(err);
             })
-
     }
+
+    //should make a call to /listings and a route that has a find parameter
+    //wont mix up a show route or anything since we're not altering the url
+    static cityGroup(cityName){
+        return fetch(`${url}/${cityName}`)
+            .then((response) => {
+                return response.json()
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }
+    
 
 
 }

@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
 
-function LocationCard() {
+function LocationCard(props) {
+    // console.log(props)
+
     return(
         <div>
-            <Link to = '/locations/listings'>
-                <h1>City Name</h1>
-            </Link>
+            <h3>
+                {props.cityNames}
+            </h3>
                 {/* i want the city name to be a link that takes you to a city index based on the name */}
         </div>
     )
