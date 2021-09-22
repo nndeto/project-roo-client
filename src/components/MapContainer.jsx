@@ -4,35 +4,17 @@ import Result from './mapcomponents/Result';
 
 class MapContainer extends React.Component {
     state = {
-        location: "",
         lon: "",
         lat: "",
         showMap: ""
     }
-    
-
-    componentDidMount() {
-        let fullAddress = `${this.props.street_address} ${this.props.city}, ${this.props.state}`
-        console.log(fullAddress)
-        let currentLocation = this.state.location
-        currentLocation = fullAddress
-        this.setState({
-            location: currentLocation
-        })
-    }
-    
-
-    componentDidUpdate() {
-        this.getAddress()
-    }
 
     getAddress = () => {
-        const endPoint = `https://us1.locationiq.com/v1/search.php?key=pk.1d2d0bc87e12ce4df72d54bea2e1714a&q=${this.state.location}&format=json`
+        const endPoint = `https://us1.locationiq.com/v1/search.php?key=pk.1d2d0bc87e12ce4df72d54bea2e1714a&q=${this.props.location}&format=json`
         let longitude = this.state.lon
         let latitude = this.state.lat
         fetch(endPoint)
         .then(response => {
-          
             return(response.json())
         })
         .then(data => {
@@ -58,9 +40,9 @@ class MapContainer extends React.Component {
     }
     
     render() {
+        this.getAddress()
         return(
             <div>
-                <h2>Hi, I hold the map pieces.</h2>
                 < Result 
                     showMap = {this.state.showMap}
                 />

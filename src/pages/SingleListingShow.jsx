@@ -11,7 +11,8 @@ class SingleListingShow extends React.Component {
         street_address: '',
         city: '',
         state: '',
-        pictures:[]
+        pictures:[],
+        location: ''
     }
 
     componentDidMount() {
@@ -29,6 +30,18 @@ class SingleListingShow extends React.Component {
                 state: data.state,
                 pictures: data.pictures
             })
+            this.setLocation()
+        })
+    }
+
+
+    //gonna be used to pass location to my map container
+    setLocation() {
+        let fullAddress = `${this.state.street_address} ${this.state.city}, ${this.state.state}`
+        let currentLocation = this.state.location
+        currentLocation = fullAddress
+        this.setState({
+            location: currentLocation
         })
     }
 
@@ -61,10 +74,8 @@ class SingleListingShow extends React.Component {
                     <button onClick = {this.deleteListing}> Delete</button>
                 </div>
                 <div>
-                    <MapContainer 
-                        street_address = {this.state.street_address}
-                        city = {this.state.city}
-                        state = {this.state.state}
+                    <MapContainer
+                        location = {this.state.location} 
                     />
                 </div>
             </div>

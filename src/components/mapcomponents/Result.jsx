@@ -5,6 +5,7 @@ function Result(props) {
             <div>
                 <img 
                     src ={props.showMap}
+                    alt = "Location Address"
                 />
             </div>
         )
