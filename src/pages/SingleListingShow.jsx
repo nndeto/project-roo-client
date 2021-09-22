@@ -1,6 +1,7 @@
 import React from 'react';
 import ListingModel from '../models/ListingModel'
 import NavBar from '../components/NavBar';
+import MapContainer from '../components/MapContainer';
 
 class SingleListingShow extends React.Component {
     state = {
@@ -58,6 +59,13 @@ class SingleListingShow extends React.Component {
                 <div>
                     <button>Update</button>
                     <button onClick = {this.deleteListing}> Delete</button>
+                </div>
+                <div>
+                    <MapContainer 
+                        street_address = {this.state.street_address}
+                        city = {this.state.city}
+                        state = {this.state.state}
+                    />
                 </div>
             </div>
         )
