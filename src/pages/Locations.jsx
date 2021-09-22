@@ -11,7 +11,7 @@ class Locations extends React.Component {
 
     componentDidMount() {
         ListingModel.all().then((data) => {
-            console.log(data)
+            // console.log(data)
             this.setState({
                 listingData: data
             });

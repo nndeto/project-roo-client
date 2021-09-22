@@ -27,7 +27,33 @@ class ListingModel {
     }
 
     //this will be my show route for a single listing
+    //making it a longer route so that i don't hit my locations route accidentally
+    static showListings(listingId){
+        return fetch(`${url}/city/${listingId}`)
+            .then((response) => {
+                return response.json()
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }
     
+    static newListing(listing){
+        return fetch(url, {
+            method:'POST',
+            mode: 'cors',
+            body: JSON.stringify(listing),
+            headers: {
+                'Content-Type': 'application/json',
+              }
+        }).then((response)=>{
+            console.log(response.json)
+            return response.json()
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    }
 
 
 }
