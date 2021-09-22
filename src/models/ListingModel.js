@@ -38,6 +38,8 @@ class ListingModel {
             })
     }
     
+
+    //create route that passes a new listing and passes it back to my backend
     static newListing(listing){
         return fetch(url, {
             method:'POST',
@@ -55,6 +57,21 @@ class ListingModel {
         })
     }
 
+
+    //do i need to do a response call??
+    static deleteListing(listingId){
+        return fetch(`${url}/${listingId}`, {
+            method: `DELETE`,
+            mode: `cors`,
+            headers: {
+                'Content-Type': 'application/json',
+              }
+        }).then((response) => {
+            return response.json()
+        }).catch((err) => {
+            console.log(err)
+        })
+    }
 
 }
 

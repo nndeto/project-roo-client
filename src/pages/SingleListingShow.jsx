@@ -29,7 +29,18 @@ class SingleListingShow extends React.Component {
                 pictures: data.pictures
             })
         })
+    }
 
+    //gonna take that objectid i handed back here and send it to the front!
+    //redirect!
+    deleteListing = () => {
+            const listingId = this.props.match.params.listing
+            // console.log(listingId)
+        ListingModel.deleteListing(listingId).then((res) => {
+            console.log(res)
+        }).catch((err) => {
+            console.log(err)
+        })
     }
 
     render() {
@@ -46,7 +57,7 @@ class SingleListingShow extends React.Component {
                 </main>
                 <div>
                     <button>Update</button>
-                    <button>Delete</button>
+                    <button onClick = {this.deleteListing}> Delete</button>
                 </div>
             </div>
         )
