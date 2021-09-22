@@ -11,7 +11,7 @@ class SingleListingShow extends React.Component {
         street_address: '',
         city: '',
         state: '',
-        pictures:''
+        pictures:[]
     }
 
     componentDidMount() {

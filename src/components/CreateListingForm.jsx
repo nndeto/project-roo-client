@@ -8,7 +8,7 @@ class CreateListingForm extends React.Component {
         street_address: '',
         city: '',
         state: '',
-        pictures:''
+        pictures:[]
     }
 
     //write a general function to handle input values
