@@ -45,10 +45,10 @@ class SingleListingShow extends React.Component {
         })
     }
 
-    //gonna take that objectid i handed back here and send it to the front!
+    //gonna take that objectid i handed here and send it to the backend!
     //redirect!
     deleteListing = () => {
-            const listingId = this.props.match.params.listing
+        const listingId = this.props.match.params.listing
             // console.log(listingId)
         ListingModel.deleteListing(listingId).then((res) => {
             console.log(res)

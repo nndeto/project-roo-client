@@ -2,16 +2,31 @@ import NavBar from "../components/NavBar";
 import React from 'react'
 import CreateListingForm from "../components/CreateListingForm";
 import ListingModel from "../models/ListingModel";
+import { Redirect } from "react-router";
 
 class CreateListing extends React.Component {
-    //create listing will go here
+    state = {
+        redirect: false,
+        cityName: ""
+    }
+
     createListing = (listing) => {
-        ListingModel.newListing(listing).then(()=> {
-            // REVISIT <Redirect to = {`/locations`} />
+        ListingModel.newListing(listing).then((data)=> {
+            let city = data.city
+            this.setState({
+                redirect: true,
+                cityName: city
+            });
         })
     }
 
     render() {
+        const { redirect } = this.state;
+
+        if (redirect) {
+          return <Redirect to = {`/locations/${this.state.cityName}`} />;
+        }
+
         return(
             <div>
                 <NavBar />
