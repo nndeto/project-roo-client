@@ -1,7 +1,6 @@
 import React from "react";
 import SignupForm from "../components/SignupForm";
 
-
 class Login extends React.Component {
     state = {
       username: '',
@@ -13,7 +12,10 @@ class Login extends React.Component {
   
     onSubmit = (event) => {
       event.preventDefault();
-      console.log("you submitted me")
+      let username = this.state.username
+      let password = this.state.password
+      this.props.handleLogin(username, password)
+      console.log("you submitted me")   
     };
   
     handleInputChange = (event) => {
@@ -62,7 +64,7 @@ class Login extends React.Component {
             </div>
             {/* makes this go away when my signup form is brought up */}
             <div style = {this.props.formStyle}>
-                <h3>Don't have an account?</h3>
+                <p>Don't have an account?</p>
                 {/* when we click this button i'll need to toggle both 
                 this state and the other states displays to hide the appropriate forms */}
                 <button onClick = {this.handleClick}>Signup</button>
