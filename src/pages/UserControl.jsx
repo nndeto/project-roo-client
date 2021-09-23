@@ -13,7 +13,7 @@ class UserControl extends React.Component{
     //need to pass down login props to make my fetch call here
 
     //will make either the signup or login show up instead
-    toggleBodyForm = () => {
+    toggleForm = () => {
         this.state.formStyle.display === 'block'
             ? this.setState({ formStyle: { display: 'none' } })
             : this.setState({ formStyle: { display: 'block' } });
@@ -26,6 +26,8 @@ class UserControl extends React.Component{
                 <NavBar />
                 <Login 
                     formStyle = {this.state.formStyle}
+                    toggleForm = {this.toggleForm}
+                    style = {this.state.formStyle}
                 />
             </div>
         )

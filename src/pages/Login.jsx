@@ -22,34 +22,42 @@ class Login extends React.Component {
         });
     }
 
+    handleClick = (event) =>{
+        this.props.toggleForm()
+    }
+
     render() {
       return (
-          <div>
-            <form onSubmit={this.onSubmit}>
-                <label>
-                    Username:
-                </label>
-                <input 
-                    name = "username"
-                    type = "text"
-                    value = {this.state.username}
-                    onChange = {this.handleInputChange}
-                />
-                <br />
-                <label>
-                    Password:
-                </label>
-                <input 
-                    name = "password"
-                    type = "text"
-                    value = {this.state.password}
-                    onChange = {this.handleInputChange}
-                />
-                <br />
-                <input type = 'submit' value = "Login"/>
-            </form>
-            <h3>Don't have an account?</h3>
-            <button>Signup</button>
+          <div style = {this.props.style}>
+            <div>
+                <form onSubmit={this.onSubmit}>
+                    <label>
+                        Username:
+                    </label>
+                    <input 
+                        name = "username"
+                        type = "text"
+                        value = {this.state.username}
+                        onChange = {this.handleInputChange}
+                    />
+                    <br />
+                    <label>
+                        Password:
+                    </label>
+                    <input 
+                        name = "password"
+                        type = "text"
+                        value = {this.state.password}
+                        onChange = {this.handleInputChange}
+                    />
+                    <br />
+                    <input type = 'submit' value = "Login"/>
+                </form>
+            </div>
+            <div style = {!this.props.style}>
+                <h3>Don't have an account?</h3>
+                <button onClick = {this.handleClick}>Signup</button>
+            </div>
           </div>
       );
     }
