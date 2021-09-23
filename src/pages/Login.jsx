@@ -1,9 +1,14 @@
 import React from "react";
+import SignupForm from "../components/SignupForm";
+
 
 class Login extends React.Component {
     state = {
       username: '',
       password: '',
+      formStyle: {
+        display: 'none'
+    }
     };
   
     onSubmit = (event) => {
@@ -28,7 +33,7 @@ class Login extends React.Component {
 
     render() {
       return (
-          <div style = {this.props.style}>
+          <div style = {this.props.formStyle}>
             <div>
                 <form onSubmit={this.onSubmit}>
                     <label>
@@ -54,9 +59,12 @@ class Login extends React.Component {
                     <input type = 'submit' value = "Login"/>
                 </form>
             </div>
-            <div style = {!this.props.style}>
+            <div>
                 <h3>Don't have an account?</h3>
+                {/* when we click this button i'll need to toggle both 
+                this state and the other states displays to hide the appropriate forms */}
                 <button onClick = {this.handleClick}>Signup</button>
+                <SignupForm style = {this.state.formStyle} />
             </div>
           </div>
       );

@@ -27,7 +27,6 @@ class UserControl extends React.Component{
                 <Login 
                     formStyle = {this.state.formStyle}
                     toggleForm = {this.toggleForm}
-                    style = {this.state.formStyle}
                 />
             </div>
         )
