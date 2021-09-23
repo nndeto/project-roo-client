@@ -7,12 +7,14 @@ import Locations from '../pages/Locations';
 import ListingsShow from '../pages/ListingsShow';
 import SingleListingShow from '../pages/SingleListingShow';
 import UpdateListing from '../pages/UpdateListing';
+import UserControl from '../pages/UserControl';
 
 
 function Routes() {
     return(
         <Switch>
             <Route exact path='/' component={HomePage} />
+            <Route exact path ='/login' component = {UserControl} />
             <Route exact path='/locations' component={Locations} />
             <Route exact path='/locations/:id' render={(props) => <ListingsShow {...props}/>} />
             <Route exact path ='/location/city/:listing' render={(props) => <SingleListingShow {...props} /> } />

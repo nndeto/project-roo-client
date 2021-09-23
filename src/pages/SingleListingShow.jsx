@@ -100,9 +100,6 @@ class SingleListingShow extends React.Component {
                         />
                     </div>
                 </div>
-                {/* <EditListingForm 
-                    toggleEditForm = {this.toggleEditForm}
-                /> */}
             </div>
         )
     }
