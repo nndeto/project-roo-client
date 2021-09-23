@@ -19,6 +19,23 @@ class UserModel{
             console.log(err)
         })
     }
+
+    static userSignup(newUser){
+        console.log(newUser)
+        return fetch(`${url}/signup`, {
+            method:'POST',
+            mode: 'cors',
+            body: JSON.stringify(newUser),
+            headers: {
+                'Content-Type': 'application/json',
+              }
+        }).then((response)=>{
+            return response.json()
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    }
 }
 
 

@@ -1,5 +1,6 @@
 import React from "react";
 import SignupForm from "../components/SignupForm";
+import UserModel from "../models/UserModel";
 
 class Login extends React.Component {
     state = {
@@ -22,13 +23,11 @@ class Login extends React.Component {
         })
     };
 
-    //goiong to pass this to the signup form, so that i can send it forward/backword
-    handleSignup = () => {
-        // console.log(username, password)
-        // UserModel.userLogin(username, password).then((data)=> {
-        //     console.log(data.message)
-        //     //if data.message === succeesss do stuff like redirect and set logged in
-        // })
+    //going to pass this to the signup form, so that i can send it forward/backword
+    handleSignup = (newUser) => {
+        UserModel.userSignup(newUser).then((data) => {
+            console.log(data.message)
+        })
     }
   
     handleInputChange = (event) => {
