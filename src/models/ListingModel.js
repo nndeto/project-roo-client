@@ -57,6 +57,22 @@ class ListingModel {
     }
 
 
+    static revisedListing(listingId, updatedListing){
+        return fetch(`${url}/${listingId}`, {
+            method: 'PUT',
+            mode: 'cors',
+            body: JSON.stringify(updatedListing),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then((response) => {
+            return response.json()
+        }).catch((err)=> {
+            console.log(err)
+        })
+    }
+
+
     //do i need to do a response call??
     static deleteListing(listingId){
         return fetch(`${url}/${listingId}`, {
