@@ -13,15 +13,13 @@ function NavBar() {
                         <Link to = "/locations">Locations</Link>
                     </li>
                     <li>
-                        {/* dummy coded until i see if i can get user auth */}
                         <Link to = "/add-a-listing">Add a Listing</Link>
                     </li>
                     <li>
-                        {/* dummy coded until i see if i can get user auth */}
+                    
                         <Link to = "/login">Login</Link>
                     </li>
                     <li>
-                        {/* dummy coded until i see if i can get user auth */}
                         <Link to = "/">LogOut</Link>
                     </li>
                     <li>

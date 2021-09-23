@@ -36,14 +36,14 @@ class SignupForm extends React.Component{
         }
         this.props.handleSignup(newUser);
         // // resets our form state after the form has been submitted
-        // this.setState({
-        //     name: '',
-        //     username: '',
-        //     age: '',
-        //     about: '',
-        //     profile_pic: '',
-        //     roommate_preferences: ''
-        // })
+        this.setState({
+            name: '',
+            username: '',
+            age: '',
+            about: '',
+            profile_pic: '',
+            roommate_preferences: ''
+        })
     }
 
 
