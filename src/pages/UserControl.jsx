@@ -5,18 +5,19 @@ import UserModel from '../models/UserModel';
 
 class UserControl extends React.Component{
     state = {
-        loggedIn: false,
         formStyle: {
             display: 'block'
         },
-        redirect: false
+        redirect: false,
+        errMessage: ""
     }
 
-    //need to pass down login props to make my fetch call here
+    //makes fetch call to login route on server
     handleLogin = (username, password) => {
         // console.log(username, password)
         UserModel.userLogin(username, password).then((data)=> {
             console.log(data.message)
+            //could set errMessage here
             //if data.message === succeesss do stuff like redirect and set logged in
         })
     }
@@ -29,6 +30,7 @@ class UserControl extends React.Component{
     };
 
     render() {
+        //could make message component down here based on state and render
         return(
             <div>
                 <NavBar />

@@ -36,6 +36,14 @@ class UserModel{
             console.log(err)
         })
     }
+
+    static logMeOut() {
+        return fetch(`${url}/logout`)
+            //error handling
+            .catch((err) => {
+                console.log(err);
+            })
+    }
 }
 
 

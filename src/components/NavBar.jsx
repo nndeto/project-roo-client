@@ -1,6 +1,11 @@
 import {Link} from 'react-router-dom'
+import UserModel from '../models/UserModel'
 
 function NavBar() {
+    function onClick() {
+        return UserModel.logMeOut()
+    }
+
     return(
         <header>
             <nav>
@@ -20,7 +25,7 @@ function NavBar() {
                         <Link to = "/login">Login</Link>
                     </li>
                     <li>
-                        <Link to = "/">LogOut</Link>
+                        <Link to = "/"><span onClick = {onClick}>Logout</span></Link> 
                     </li>
                     <li>
                         {/* static page */}
