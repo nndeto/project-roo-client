@@ -11,12 +11,25 @@ class Login extends React.Component {
     };
   
     onSubmit = (event) => {
-      event.preventDefault();
-      let username = this.state.username
-      let password = this.state.password
-      this.props.handleLogin(username, password)
-      console.log("you submitted me")   
+        event.preventDefault();
+        let username = this.state.username
+        let password = this.state.password
+        this.props.handleLogin(username, password)
+    //   console.log("you submitted me") 
+        this.setState({
+            username: '',
+            password: ''
+        })
     };
+
+    //goiong to pass this to the signup form, so that i can send it forward/backword
+    handleSignup = () => {
+        // console.log(username, password)
+        // UserModel.userLogin(username, password).then((data)=> {
+        //     console.log(data.message)
+        //     //if data.message === succeesss do stuff like redirect and set logged in
+        // })
+    }
   
     handleInputChange = (event) => {
         const target = event.target;
@@ -29,6 +42,7 @@ class Login extends React.Component {
         });
     }
 
+    //makes it so the signup form displays and the login form disappears
     handleClick = (event) =>{
         this.props.toggleForm()
         this.setState({ formStyle: { display: 'block' } });
@@ -70,7 +84,10 @@ class Login extends React.Component {
                 <button onClick = {this.handleClick}>Signup</button>
             </div>
             <div>
-                <SignupForm style = {this.state.formStyle} />
+                <SignupForm 
+                    style = {this.state.formStyle}
+                    handleSignup = {this.handleSignup} 
+                />
             </div>
           </div>
       );

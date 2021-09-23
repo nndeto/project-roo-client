@@ -17,6 +17,7 @@ class UserControl extends React.Component{
         // console.log(username, password)
         UserModel.userLogin(username, password).then((data)=> {
             console.log(data.message)
+            //if data.message === succeesss do stuff like redirect and set logged in
         })
     }
 
