@@ -7,7 +7,8 @@ class UserControl extends React.Component{
         loggedIn: false,
         formStyle: {
             display: 'block'
-        }
+        },
+        redirect: false
     }
 
     //need to pass down login props to make my fetch call here

@@ -29,12 +29,13 @@ class Login extends React.Component {
 
     handleClick = (event) =>{
         this.props.toggleForm()
+        this.setState({ formStyle: { display: 'block' } });
     }
 
     render() {
       return (
-          <div style = {this.props.formStyle}>
-            <div>
+          <div>
+            <div style = {this.props.formStyle}>
                 <form onSubmit={this.onSubmit}>
                     <label>
                         Username:
@@ -59,11 +60,14 @@ class Login extends React.Component {
                     <input type = 'submit' value = "Login"/>
                 </form>
             </div>
-            <div>
+            {/* makes this go away when my signup form is brought up */}
+            <div style = {this.props.formStyle}>
                 <h3>Don't have an account?</h3>
                 {/* when we click this button i'll need to toggle both 
                 this state and the other states displays to hide the appropriate forms */}
                 <button onClick = {this.handleClick}>Signup</button>
+            </div>
+            <div>
                 <SignupForm style = {this.state.formStyle} />
             </div>
           </div>
