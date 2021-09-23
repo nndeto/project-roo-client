@@ -15,9 +15,9 @@ class UpdateListing extends React.Component{
         ListingModel.revisedListing(listingId, updatedListing)
         .then((res) => {
             console.log(res)
-            // this.setState({
-            //     redirect: true
-            // })
+            this.setState({
+                redirect: true
+            })
         }).catch((err) => {
             console.log(err)
         })
