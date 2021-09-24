@@ -51,7 +51,7 @@ class Login extends React.Component {
     }
 
     render() {
-        //need to redirect to profile once we get that coded
+       //if you sisgnup this is that redirect take them to profile
         // const { redirect } = this.state;
         // if (redirect) {
         //   return <Redirect to = {`/locations`} />;

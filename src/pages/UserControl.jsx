@@ -31,6 +31,7 @@ class UserControl extends React.Component{
     };
 
     render() {
+         //need to redirect to profile once we get that coded with user id
         console.log(this.props)
         //could make message component down here based on state and render
         return(
