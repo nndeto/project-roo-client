@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import NavBar from "../components/NavBar";
 import ListingModel from '../models/ListingModel'
 import LocationCard from "../components/LocationCard";
 
@@ -51,7 +50,6 @@ class Locations extends React.Component {
     render() {
         return(
             <div>
-                <NavBar />
                 {this.renderCityNames()}
             </div>
         )

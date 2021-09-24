@@ -1,6 +1,5 @@
 import React from 'react';
 import ListingModel from '../models/ListingModel'
-import NavBar from '../components/NavBar';
 import MapContainer from '../components/MapContainer';
 import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
@@ -73,7 +72,6 @@ class SingleListingShow extends React.Component {
         return(
             <div>
                 <div>
-                    <NavBar />
                     <main>
                         <h1>{this.state.title}</h1>
                         <h2>{this.state.lister}</h2>

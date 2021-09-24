@@ -1,4 +1,3 @@
-import NavBar from "../components/NavBar";
 import React from 'react'
 import CreateListingForm from "../components/CreateListingForm";
 import ListingModel from "../models/ListingModel";
@@ -28,8 +27,8 @@ class CreateListing extends React.Component {
 
         return(
             <div>
-                <NavBar />
                 <CreateListingForm 
+                    currentName = {this.props.currentName}
                     createListing = {this.createListing} />
             </div>
         )

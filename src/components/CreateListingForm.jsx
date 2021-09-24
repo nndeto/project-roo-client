@@ -3,7 +3,7 @@ import React from 'react'
 
 class CreateListingForm extends React.Component {
     state = {
-        lister: '',
+        lister: '' || `${this.props.currentName}`,
         title: '',
         description: '',
         price: '',

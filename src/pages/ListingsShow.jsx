@@ -1,5 +1,4 @@
 import React from 'react'
-import NavBar from '../components/NavBar'
 import ListingModel from '../models/ListingModel';
 import Listing from '../components/Listing';
 
@@ -38,7 +37,6 @@ class ListingsShow extends React.Component {
     render() {
         return(
             <div>
-                <NavBar />
                 {this.renderCities()}
             </div>
         )

@@ -1,6 +1,5 @@
 import React from "react"
 import UserModel from "../models/UserModel"
-import NavBar from "../components/NavBar"
 import ProfileCard from "../components/ProfileCard"
 
 class Profile extends React.Component{
@@ -11,6 +10,7 @@ class Profile extends React.Component{
 
     componentDidMount() {
         const lister = this.props.match.params.listerName
+        let foundUser;
         UserModel.findProfile(lister).then((data) =>{
             console.log(data.message,  "incoming", data)
             if(data.message === "Not signed up.") {
@@ -21,7 +21,7 @@ class Profile extends React.Component{
             }
             if (data.message === "Welcome!")
                 this.setState({
-                    profileData: [data.foundUser],
+                    profileData: data.foundUser,
                     message: data.message
                 })
         })
@@ -52,9 +52,6 @@ class Profile extends React.Component{
     render() {
         return(
             <div>
-                <header>
-                    <NavBar />
-                </header>
                 {this.renderProfile()}
             </div>
         )

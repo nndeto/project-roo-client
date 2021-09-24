@@ -1,6 +1,5 @@
 import React from 'react';
 import Login from './Login';
-import NavBar from '../components/NavBar';
 import UserModel from '../models/UserModel';
 
 
@@ -21,6 +20,8 @@ class UserControl extends React.Component{
             this.setState({
                 message: data.message
             })
+            let name = this.state.message
+            this.props.setName(name)
         })
         this.props.toggleLoggedIn()
     }
@@ -34,12 +35,10 @@ class UserControl extends React.Component{
 
     render() {
          //need to redirect to profile once we get that coded with user id
-        console.log(this.props)
+        // console.log(this.props)
         //could make message component down here based on state and render
         return(
             <div>
-                <NavBar 
-                />
                 <Login 
                     formStyle = {this.state.formStyle}
                     toggleForm = {this.toggleForm}

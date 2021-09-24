@@ -1,5 +1,4 @@
 import React from 'react'
-import NavBar from '../components/NavBar'
 import ListingModel from '../models/ListingModel'
 import { Link } from 'react-router-dom'
 import RoommateCard from '../components/RoommateCard'
@@ -40,9 +39,6 @@ class Roommates extends React.Component{
     render() {
         return(
             <div>
-                <header>
-                    <NavBar />
-                </header>
                 {this.renderListerNames()}
             </div>
         )

@@ -1,6 +1,5 @@
 import React from 'react'
 import EditListingForm from "../components/EditListingForm";
-import NavBar from "../components/NavBar";
 import { Redirect } from "react-router";
 import ListingModel from '../models/ListingModel';
 
@@ -32,9 +31,6 @@ class UpdateListing extends React.Component{
 
         return(
             <div>
-                <div>
-                    <NavBar />
-                </div>
                 <EditListingForm
                     listingId = {listingId}
                     updateListing = {this.updateListing}
