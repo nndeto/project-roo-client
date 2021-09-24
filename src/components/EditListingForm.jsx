@@ -4,6 +4,7 @@ import ListingModel from '../models/ListingModel';
 
 class EditListingForm extends React.Component {
     state = {
+        lister: '',
         title: '',
         description: '',
         price: '',
@@ -20,6 +21,7 @@ class EditListingForm extends React.Component {
         ListingModel.showListings(listingId).then((data) => {
             // console.log(data)
             this.setState({
+                lister: data.lister,
                 title: data.title,
                 description: data.description,
                 price: data.price,
@@ -47,6 +49,7 @@ class EditListingForm extends React.Component {
         event.preventDefault();
         //creates a newListing we can pass our backend based off our form data
         let updatedListing = {
+            lister: this.state.lister,
             title: this.state.title,
             description: this.state.description,
             price: this.state.price,
@@ -59,6 +62,7 @@ class EditListingForm extends React.Component {
         // this.props.createListing(newListing); change to update function
         // resets our form state after the form has been submitted
         this.setState({
+            lister: '',
             title: '',
             description: '',
             price: '',
@@ -75,6 +79,16 @@ class EditListingForm extends React.Component {
         return(
             <div>
                 <form onSubmit = {this.onFormSubmit}>
+                    <label>
+                        Lister:
+                        <input
+                            name = "lister"
+                            type = "text"
+                            value = {this.state.lister}
+                            onChange = {this.handleInputChange}
+                        />
+                    </label>
+                    <br />
                     <label>
                         Title:
                         <input

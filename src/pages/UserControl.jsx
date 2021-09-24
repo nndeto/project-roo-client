@@ -9,7 +9,7 @@ class UserControl extends React.Component{
             display: 'block'
         },
         redirect: false,
-        errMessage: ""
+        message: ""
     }
 
     //makes fetch call to login route on server
@@ -17,8 +17,9 @@ class UserControl extends React.Component{
         // console.log(username, password)
         UserModel.userLogin(username, password).then((data)=> {
             console.log(data.message)
-            //could set errMessage here
-            //if data.message === succeesss do stuff like redirect and set logged in
+            this.setState({
+                message: data.message
+            })
         })
     }
 
@@ -30,6 +31,7 @@ class UserControl extends React.Component{
     };
 
     render() {
+        console.log(this.props)
         //could make message component down here based on state and render
         return(
             <div>
@@ -38,6 +40,7 @@ class UserControl extends React.Component{
                     formStyle = {this.state.formStyle}
                     toggleForm = {this.toggleForm}
                     handleLogin = {this.handleLogin}
+                    message = {this.state.message}
                 />
             </div>
         )

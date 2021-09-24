@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 
 class SingleListingShow extends React.Component {
     state = {
+        lister: '',
         title: '',
         description: '',
         price: '',
@@ -25,6 +26,7 @@ class SingleListingShow extends React.Component {
         ListingModel.showListings(listingId).then((data) => {
             // console.log(data)
             this.setState({
+                lister: data.lister,
                 title: data.title,
                 description: data.description,
                 price: data.price,
@@ -37,7 +39,6 @@ class SingleListingShow extends React.Component {
         })
     }
 
-
     //gonna be used to pass location to my map container
     setLocation() {
         let fullAddress = `${this.state.street_address} ${this.state.city}, ${this.state.state}`
@@ -46,13 +47,6 @@ class SingleListingShow extends React.Component {
         this.setState({
             location: currentLocation
         })
-    }
-
-    // updateListing --> will call backend route pass to form
-        //set the redirect
-        //redirect!
-    updateListing = () => {
-        console.log("you hit me")
     }
 
     //gonna take that objectid i handed here and send it to the backend!
@@ -82,6 +76,7 @@ class SingleListingShow extends React.Component {
                     <NavBar />
                     <main>
                         <h1>{this.state.title}</h1>
+                        <h2>{this.state.lister}</h2>
                         <h3>{this.state.description}</h3>
                         <p>${this.state.price}</p>
                         <p>{this.state.street_address}</p>

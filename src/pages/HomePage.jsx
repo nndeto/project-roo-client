@@ -2,10 +2,14 @@
 import NavBar from "../components/NavBar";
 
 
-function HomePage() {
+function HomePage(props) {
+    console.log(props)
     return (
         <main>
-            <NavBar />
+            <NavBar 
+                // loggedIn = {props.loggedIn}
+                // toggleLoggedIn = {props.toggleLoggedIn}
+            />
             <h1>Roo</h1>
         </main>
     )

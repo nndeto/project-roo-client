@@ -1,14 +1,17 @@
 import React from "react";
 import SignupForm from "../components/SignupForm";
 import UserModel from "../models/UserModel";
+// import { Redirect } from "react-router";
+
 
 class Login extends React.Component {
     state = {
-      username: '',
-      password: '',
-      formStyle: {
-        display: 'none'
-    }
+        username: '',
+        password: '',
+        formStyle: {
+            display: 'none'
+        },
+        redirect: false
     };
   
     onSubmit = (event) => {
@@ -48,6 +51,13 @@ class Login extends React.Component {
     }
 
     render() {
+        //need to redirect to profile once we get that coded
+        // const { redirect } = this.state;
+        // if (redirect) {
+        //   return <Redirect to = {`/locations`} />;
+        // }
+
+
       return (
           <div>
             <div style = {this.props.formStyle}>
@@ -72,14 +82,16 @@ class Login extends React.Component {
                         onChange = {this.handleInputChange}
                     />
                     <br />
+                    {this.props.message}
+                    <br />
+                    <br />
                     <input type = 'submit' value = "Login"/>
                 </form>
             </div>
             {/* makes this go away when my signup form is brought up */}
             <div style = {this.props.formStyle}>
                 <p>Don't have an account?</p>
-                {/* when we click this button i'll need to toggle both 
-                this state and the other states displays to hide the appropriate forms */}
+                {/* this button toggles both this state and the other states displays to hide the appropriate forms */}
                 <button onClick = {this.handleClick}>Signup</button>
             </div>
             <div>

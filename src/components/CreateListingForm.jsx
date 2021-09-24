@@ -3,6 +3,7 @@ import React from 'react'
 
 class CreateListingForm extends React.Component {
     state = {
+        lister: '',
         title: '',
         description: '',
         price: '',
@@ -29,6 +30,7 @@ class CreateListingForm extends React.Component {
         event.preventDefault();
         //creates a newListing we can pass our backend based off our form data
         let newListing = {
+            lister: this.state.lister,
             title: this.state.title,
             description: this.state.description,
             price: this.state.price,
@@ -40,6 +42,7 @@ class CreateListingForm extends React.Component {
         this.props.createListing(newListing);
         // resets our form state after the form has been submitted
         this.setState({
+            lister: '',
             title: '',
             description: '',
             price: '',
@@ -56,6 +59,16 @@ class CreateListingForm extends React.Component {
         return(
             <div>
                 <form onSubmit = {this.onFormSubmit}>
+                    <label>
+                        Lister:
+                        <input
+                            name = "lister"
+                            type = "text"
+                            value = {this.state.lister}
+                            onChange = {this.handleInputChange}
+                        />
+                    </label>
+                    <br />
                     <label>
                         Title:
                         <input

@@ -8,19 +8,24 @@ import ListingsShow from '../pages/ListingsShow';
 import SingleListingShow from '../pages/SingleListingShow';
 import UpdateListing from '../pages/UpdateListing';
 import UserControl from '../pages/UserControl';
+import Profile from '../pages/Profile';
 
 
-function Routes() {
+function Routes(props) {
     return(
-        <Switch>
-            <Route exact path='/' component={HomePage} />
-            <Route exact path ='/login' component = {UserControl} />
-            <Route exact path='/locations' component={Locations} />
-            <Route exact path='/locations/:id' render={(props) => <ListingsShow {...props}/>} />
+        <Switch
+            // loggedIn = {props.loggedIn}
+            // toggleLoggedIn = {props.toggleLoggedIn}
+        >
+            <Route exact path = '/' render={(props) => <HomePage {...props}/>} />
+            <Route exact path ='/login' render={(props) => <UserControl {...props}/>} />
+            <Route exact path = '/profile/:listerName' render={(props) => <Profile {...props}/>}/>
+            <Route exact path = '/locations' component={Locations} />
+            <Route exact path = '/locations/:id' render={(props) => <ListingsShow {...props}/>} />
             <Route exact path ='/location/city/:listing' render={(props) => <SingleListingShow {...props} /> } />
             <Route exact path = '/update/:listingId' render = {(props) => <UpdateListing {...props} />} />
-            <Route exact path='/add-a-listing' component={CreateListing} />
-            <Route exact path='/frequently-asked-questions' component={FAQ} />
+            <Route exact path = '/add-a-listing' component={CreateListing} />
+            <Route exact path = '/frequently-asked-questions' component={FAQ} />
         </Switch>
     )
 }

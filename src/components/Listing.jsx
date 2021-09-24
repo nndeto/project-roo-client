@@ -7,6 +7,9 @@ function Listing(props) {
             <Link to = {`/location/city/${props.cityObj._id}`}>
                 <p>{props.cityObj.title}</p>
             </Link>
+            <Link to = {`/profile/${props.cityObj.lister}`}> 
+                <p>{props.cityObj.lister}</p>
+            </Link>
             <p>{props.cityObj.description}</p>
             <p>$ {props.cityObj.price}</p>
             <p>{props.cityObj.street_address}</p>

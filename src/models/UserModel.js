@@ -37,6 +37,16 @@ class UserModel{
         })
     }
 
+    static findProfile(lister){
+        return fetch(`${url}/${lister}`)
+        .then((response) => {
+            return response.json()
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+    }
+
     static logMeOut() {
         return fetch(`${url}/logout`)
             //error handling
@@ -45,6 +55,5 @@ class UserModel{
             })
     }
 }
-
 
 export default UserModel
