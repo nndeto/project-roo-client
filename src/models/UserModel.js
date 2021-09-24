@@ -38,7 +38,7 @@ class UserModel{
     }
 
     static findProfile(lister){
-        return fetch(`${url}/${lister}`)
+        return fetch(`${url}/profile/${lister}`)
         .then((response) => {
             return response.json()
         })
