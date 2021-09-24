@@ -13,6 +13,7 @@ class UserControl extends React.Component{
     }
 
     //makes fetch call to login route on server
+    //also triggers back up to App to change all the states
     handleLogin = (username, password) => {
         // console.log(username, password)
         UserModel.userLogin(username, password).then((data)=> {

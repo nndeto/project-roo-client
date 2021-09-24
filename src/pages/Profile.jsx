@@ -10,7 +10,6 @@ class Profile extends React.Component{
 
     componentDidMount() {
         const lister = this.props.match.params.listerName
-        let foundUser;
         UserModel.findProfile(lister).then((data) =>{
             console.log(data.message,  "incoming", data)
             if(data.message === "Not signed up.") {
@@ -37,7 +36,16 @@ class Profile extends React.Component{
                 </div>
             )
         } else if (this.state.message === "Welcome!") {
-            console.log(this.state.profileData + "data")
+            const allData = Object.keys(this.state.profileData);
+            console.log(allData)
+            const profileJSX = allData.map((profileObj, idx) => {
+                return (
+                    <div>
+                        <ProfileCard key = {idx} profileObj = {profileObj} profileData = {this.state.profileData} />
+                    </div>
+                )
+            })
+            return profileJSX
             // const allData = this.state.profileData.map((profileObj, idx) => {
             //     return(
             //         <div>

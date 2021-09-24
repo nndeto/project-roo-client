@@ -9,6 +9,7 @@ class App extends React.Component {
     currentName: ""
   }
 
+  //when one of its children triggers it later it'll alter state for whole app
   toggleLoggedIn = () => {
     this.setState({
       loggedIn: !this.state.loggedIn,
@@ -16,6 +17,7 @@ class App extends React.Component {
     })
   }
 
+  //sets name so that we can pass that name to profile route and create listing form
   setName = (name) => {
     this.setState({
       currentName: name

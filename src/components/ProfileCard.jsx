@@ -1,7 +1,8 @@
-function ProfileCard() {
+function ProfileCard(props) {
+    // console.log(props) 
     return(
         <div>
-            <h1>Hiiii</h1>
+            <p>{props.profileObj}: {props.profileData[props.profileObj]} </p>
         </div>
     )
 }
