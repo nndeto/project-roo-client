@@ -3,7 +3,7 @@ import NavBar from "../components/NavBar";
 
 
 function HomePage(props) {
-    console.log(props)
+    // console.log(props)
     return (
         <main>
             <NavBar 

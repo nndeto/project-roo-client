@@ -3,6 +3,7 @@ import Login from './Login';
 import NavBar from '../components/NavBar';
 import UserModel from '../models/UserModel';
 
+
 class UserControl extends React.Component{
     state = {
         formStyle: {
@@ -21,6 +22,7 @@ class UserControl extends React.Component{
                 message: data.message
             })
         })
+        this.props.toggleLoggedIn()
     }
 
     //will make either the signup or login show up instead
@@ -36,7 +38,8 @@ class UserControl extends React.Component{
         //could make message component down here based on state and render
         return(
             <div>
-                <NavBar />
+                <NavBar 
+                />
                 <Login 
                     formStyle = {this.state.formStyle}
                     toggleForm = {this.toggleForm}

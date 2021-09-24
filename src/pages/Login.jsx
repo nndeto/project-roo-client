@@ -1,7 +1,7 @@
 import React from "react";
 import SignupForm from "../components/SignupForm";
 import UserModel from "../models/UserModel";
-// import { Redirect } from "react-router";
+import { Redirect } from "react-router";
 
 
 class Login extends React.Component {
@@ -11,7 +11,8 @@ class Login extends React.Component {
         formStyle: {
             display: 'none'
         },
-        redirect: false
+        redirect: false,
+        signUpRedirectName: ''
     };
   
     onSubmit = (event) => {
@@ -29,7 +30,11 @@ class Login extends React.Component {
     //going to pass this to the signup form, so that i can send it forward/backword
     handleSignup = (newUser) => {
         UserModel.userSignup(newUser).then((data) => {
-            console.log(data.message)
+            console.log(data)
+            this.setState({
+                signUpRedirectName: data.createdUser.name,
+                redirect: true
+            })
         })
     }
   
@@ -52,11 +57,10 @@ class Login extends React.Component {
 
     render() {
        //if you sisgnup this is that redirect take them to profile
-        // const { redirect } = this.state;
-        // if (redirect) {
-        //   return <Redirect to = {`/locations`} />;
-        // }
-
+        const { redirect } = this.state;
+        if (redirect) {
+          return <Redirect to = {`/profile/${this.state.signUpRedirectName}`} />;
+        }
 
       return (
           <div>
@@ -92,7 +96,7 @@ class Login extends React.Component {
             <div style = {this.props.formStyle}>
                 <p>Don't have an account?</p>
                 {/* this button toggles both this state and the other states displays to hide the appropriate forms */}
-                <button onClick = {this.handleClick}>Signup</button>
+                <button onClick = {this.handleClick}>Get One</button>
             </div>
             <div>
                 <SignupForm 

@@ -4,6 +4,7 @@ class SignupForm extends React.Component{
     state = {
         name: '',
         username: '',
+        password: '',
         age: '',
         about: '',
         profile_pic: '',
@@ -29,6 +30,7 @@ class SignupForm extends React.Component{
         let newUser = {
             name: this.state.name,
             username: this.state.username,
+            password: this.state.password,
             age: this.state.age,
             about: this.state.about,
             profile_pic: this.state.profile_pic,
@@ -39,13 +41,13 @@ class SignupForm extends React.Component{
         this.setState({
             name: '',
             username: '',
+            password: '',
             age: '',
             about: '',
             profile_pic: '',
             roommate_preferences: ''
         })
     }
-
 
     render() {
         return(
@@ -67,6 +69,16 @@ class SignupForm extends React.Component{
                             name = "username"
                             type = "text"
                             value = {this.state.username}
+                            onChange = {this.handleInputChange}
+                        />
+                    </label>
+                    <br />
+                    <label>
+                        Password:
+                        <input
+                            name = "password"
+                            type = "text"
+                            value = {this.state.password}
                             onChange = {this.handleInputChange}
                         />
                     </label>

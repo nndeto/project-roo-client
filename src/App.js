@@ -6,7 +6,7 @@ import Routes from './config/Routes'
 //could have state in app and pass function to set that state to components tht need it
 class App extends React.Component {
   state = {
-    loggedIn: false
+    loggedIn: false,
   }
 
   toggleLoggedIn = () => {
@@ -15,6 +15,7 @@ class App extends React.Component {
     })
   }
 
+  
   render() {
     return (
       <div className="App">
@@ -22,12 +23,6 @@ class App extends React.Component {
           loggedIn = {this.state.loggedIn}
           toggleLoggedIn = {this.toggleLoggedIn}
           />
-            
-          {/* <HomePage 
-            loggedIn = {this.state.loggedIn}
-            toggleLoggedIn = {this.toggleLoggedIn}
-          /> */}
-          {/* </Routes */}
       </div>
     );
   }

@@ -12,18 +12,18 @@ class Profile extends React.Component{
     componentDidMount() {
         const lister = this.props.match.params.listerName
         UserModel.findProfile(lister).then((data) =>{
-            // console.log(data.message)
+            console.log(data.message,  "incoming", data)
             if(data.message === "Not signed up.") {
                 this.setState({
                     profileData: [],
                     message: data.message
                 })
-            } else {
-                this.setState({
-                    profileData: data,
-                    message: ""
-                })
             }
+            if (data.message === "Welcome!")
+                this.setState({
+                    profileData: [data.foundUser],
+                    message: data.message
+                })
         })
     }
 
@@ -36,16 +36,16 @@ class Profile extends React.Component{
                     {/* insert social media links here */}
                 </div>
             )
-        } else {
-            const allData = this.state.profileData.map((profileObj, idx) => {
-                return(
-                    <div>
-                        <ProfileCard key = {idx} profileObj = {profileObj} />
-                        <br />
-                    </div>
-                )
-            });
-            return allData
+        } else if (this.state.message === "Welcome!") {
+            console.log(this.state.profileData + "data")
+            // const allData = this.state.profileData.map((profileObj, idx) => {
+            //     return(
+            //         <div>
+            //             <ProfileCard key = {idx} profileObj = {profileObj} />
+            //         </div>
+            //     )
+            // });
+            // return allData
         }
     }
 
