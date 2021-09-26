@@ -61,12 +61,14 @@ class CreateListingForm extends React.Component {
     render() {
         return(
             <div>
-                <form onSubmit = {this.onFormSubmit}>
+                <form onSubmit = {this.onFormSubmit} className = "list-form">
                     <label>
-                        Lister:
+                        Lister
+                        <br />
                         <input
                             name = "lister"
                             type = "text"
+                            className = "list-input"
                             placeholder = "What do we call you?"
                             value = {this.state.lister}
                             onChange = {this.handleInputChange}
@@ -74,88 +76,104 @@ class CreateListingForm extends React.Component {
                     </label>
                     <br />
                     <label>
-                        Lister Pic:
+                        Lister Pic
+                        <br />
                         <input
                             name = "lister_pic"
                             type = "text"
-                            placeholder = "optional"
+                            placeholder = "Optional"
+                            className = "list-input"
                             value = {this.state.lister_pic}
                             onChange = {this.handleInputChange}
                         />
                     </label>
                     <br />
                     <label>
-                        Title:
+                        Title
+                        <br />
                         <input
                             name = "title"
                             type = "text"
                             placeholder = "What do we call your listing?"
+                            className = "list-input"
                             value = {this.state.title}
                             onChange = {this.handleInputChange}
                         />
                     </label>
                     <br />
                     <label>
-                        Description:
+                        Description
+                        <br />
                         <textarea
                             name = "description"
+                            className = " list-input list-text"
                             value = {this.state.description}
                             onChange = {this.handleInputChange}
                         />
                     </label>
                     <br />
                     <label>
-                        Price:
+                        Price
+                        <br />
                         <input
                             name = "price"
                             type = "number"
+                            className = "list-input"
                             value = {this.state.price}
                             onChange = {this.handleInputChange}
                         />
                     </label>
                     <br />
                     <label>
-                        Street Address:
+                        Street Address
+                        <br />
                         <input
                             name = "street_address"
                             type = "text"
+                            className = "list-input"
                             value = {this.state.street_address}
                             onChange = {this.handleInputChange}
                         />
                     </label>
                     <br />
                     <label>
-                        City:
+                        City
+                        <br />
                         <input
                             name = "city"
                             type = "text"
+                            className = "list-input"
                             value = {this.state.city}
                             onChange = {this.handleInputChange}
                         />
                     </label>
                     <br />
                     <label>
-                        State:
+                        State
+                        <br />
                         <input
                             name = "state"
                             type = "text"
+                            className = "list-input"
                             value = {this.state.state}
                             onChange = {this.handleInputChange}
                         />
                     </label>
                     <br />
                     <label>
-                        Pictures:
+                        Pictures
+                        <br />
                         <input
                             name = "pictures"
                             type = "text"
                             placeholder = "One pic at a time, please!"
+                            className = "list-input"
                             value = {this.state.pictures}
                             onChange = {this.handleInputChange}
                         />
                     </label>
                     <br />
-                    <input type = 'submit' value = "Submit"/>
+                    <input type = 'submit' value = "Submit" className = "list-button"/>
                 </form>
             </div>
         )

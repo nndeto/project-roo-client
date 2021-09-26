@@ -13,7 +13,7 @@ $hover-font: 1.3rem;
     box-sizing: border-box;
     background:$background-c;
     font-family: $body-font;
-    padding: 100px;
+    padding: 140px;
     text-align: center;
     color: $main-color;
 }
@@ -53,15 +53,18 @@ $hover-font: 1.3rem;
     border-radius: 10px;
     color: $main-color;
     background: #e0e0e0;
-    box-shadow: inset 20px 20px 40px #bebebe,
-            inset -20px -20px 40px #ffffff;
+    box-shadow: 
+        inset 20px 20px 40px #bebebe,
+        inset -20px -20px 40px #ffffff;
 }
 
 .log-button:hover {
     font-size: $hover-font;
     background: #e0e0e0;
-    box-shadow: inset -20px -20px 60px #bebebe,
-            inset 20px 20px 60px #ffffff;
+    box-shadow: 
+        10px 0px 14px -7px,
+        inset -20px -20px 60px #bebebe,
+        inset 20px 20px 60px #ffffff;
 }
 
 .log-quest {

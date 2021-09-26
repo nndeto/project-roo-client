@@ -12,11 +12,11 @@ $accent-color: #E7D2CC;
 .loc-main {
     box-sizing: border-box;
     background-color: $background-c;
-    padding: 180px;
+    padding: 64px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    gap: 100px;
+    // gap: 100px;
 }
 
 .loc-card-title {
@@ -32,21 +32,17 @@ $accent-color: #E7D2CC;
     background: url('../images/opt-e.jpg');
     background-position: center;
     background-size: cover;
+    margin: 60px;
     display: flex;
     justify-content: center;
     border-radius: 10px;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     -webkit-box-reflect:below 2px 
     linear-gradient(transparent, transparent, #0004);
-    transform-origin:center;
-    transform:perspective(800px) rotateY(25deg);
-    transition:0.5s;
 }
 
 .loc-card:hover {
-    transform:perspective(800px)     
-    rotateY(0deg);
     opacity:1;
     width: 300px;
     height: 300px;

@@ -1,65 +1,86 @@
-// @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat&display=swap');
 
-// $body-font: 'Montserrat', sans-serif;
-// $main-color: #646173;
-// $second-color: #868B8E;
-// $third-color: #B9B7BD;
-// $background-c:  #EEEDE780;
-// $accent-color: #E7D2CC;
-// $margin-space: 40px;
-// $hover-font: 1.3rem;
+$body-font: 'Montserrat', sans-serif;
+$main-color: #646173;
+$second-color: #868B8E;
+$third-color: #B9B7BD;
+$background-c:  #EEEDE780;
+$accent-color: #E7D2CC;
+$margin-space: 30px;
+$hover-font: 1.4rem;
 
-// .sign-main {
-//     box-sizing: border-box;
-//     background:$background-c;
-//     font-family: $body-font;
-//     padding: 100px;
-//     text-align: center;
-//     color: $main-color;
-// }
+.sign-main {
+    box-sizing: border-box;
+    background:$background-c;
+    font-family: $body-font;
+    padding: 50px;
+    text-align: center;
+    color: $main-color;
+}
 
-// .sign-form {
-//     margin-bottom: $margin-space;
-// }
+.sign-form {
+    margin-bottom: $margin-space;
+}
 
-// .sign-label {
-//     display: none;
-// }
+.sign-label {
+    display: none;
+}
 
-// .sign-input, .sign-button {
-//     padding: 10px;
-//     outline: none;
-//     border: none;
-// }
+.sign-input, .sign-button {
+    padding: 10px;
+    outline: none;
+    border: none;
+}
 
-// .sign-input {
-//     font-size: 1.1rem;
-//     text-shadow: 2px 2px 2px white;
-//     margin: 20px;
-//     border-radius: 10px;
-//     background: #e0e0e0;
-//     box-shadow:  5px 5px 10px #bebebe,
-//                  -5px -5px 10px #ffffff;
-// }
+.sign-input {
+    width: 90%;
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 2px white;
+    margin: 20px;
+    border-radius: 10px;
+    background: #e0e0e0;
+    box-shadow:  5px 5px 10px #bebebe,
+                 -5px -5px 10px #ffffff;
+}
 
-// .sign-input:hover {
-//     padding: 13px;
-//     font-size: $hover-font;
-// }
+.sign-input:hover {
+    padding: 13px;
+    font-size: $hover-font;
+}
 
-// .sign-button {
-//     font-size: 1rem;
-//     padding: 10px 30px;
-//     border-radius: 10px;
-//     color: $main-color;
-//     background: #e0e0e0;
-//     box-shadow: inset 20px 20px 40px #bebebe,
-//             inset -20px -20px 40px #ffffff;
-// }
+.sign-button {
+    margin-top: $margin-space;
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    border-radius: 10px;
+    color: $main-color;
+    background: #e0e0e0;
+    box-shadow: 
+    inset 20px 20px 40px #bebebe,
+    inset -20px -20px 40px #ffffff;
+}
 
-// .sign-button:hover {
-//     font-size: $hover-font;
-//     background: #e0e0e0;
-//     box-shadow: inset -20px -20px 60px #bebebe,
-//             inset 20px 20px 60px #ffffff;
-// }
+.sign-button:hover {
+    font-size: $hover-font;
+    background: #e0e0e0;
+    box-shadow: 
+        10px 0px 14px -7px,
+        inset -20px -20px 60px #bebebe,
+        inset 20px 20px 60px #ffffff;
+}
+
+.sign-break {
+    margin-top: $margin-space;
+    border: 0;
+    height: 1px;
+    background-image: 
+        linear-gradient(to right, 
+        rgba(0, 0, 0, 0), 
+        rgba(0, 0, 0, 0.75), 
+        rgba(0, 0, 0, 0));
+}
+
+.sign-text {
+    width: 90%;
+    height: 200px;
+}

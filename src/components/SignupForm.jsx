@@ -1,4 +1,5 @@
 import React from "react";
+import '../css/Signup.scss'
 
 class SignupForm extends React.Component{
     state = {
@@ -51,10 +52,11 @@ class SignupForm extends React.Component{
 
     render() {
         return(
-            <div style = {this.props.style} className = "sign-main">
+            <div style = {this.props.style}>
                 <form onSubmit = {this.onFormSubmit} className = "sign-form">
                     <label className = "sign-label">
                         Name:
+                    </label>
                         <input
                             name = "name"
                             type = "text"
@@ -63,10 +65,10 @@ class SignupForm extends React.Component{
                             value = {this.state.name}
                             onChange = {this.handleInputChange}
                         />
-                    </label>
                     <br />
                     <label className = "sign-label">
                         Username:
+                    </label>
                         <input
                             name = "username"
                             type = "text"
@@ -75,10 +77,10 @@ class SignupForm extends React.Component{
                             value = {this.state.username}
                             onChange = {this.handleInputChange}
                         />
-                    </label>
                     <br />
                     <label className = "sign-label">
                         Password:
+                    </label>
                         <input
                             name = "password"
                             type = "text"
@@ -87,10 +89,10 @@ class SignupForm extends React.Component{
                             value = {this.state.password}
                             onChange = {this.handleInputChange}
                         />
-                    </label>
                     <br />
                     <label className = "sign-label">
                         Profile Picture:
+                    </label>
                         <input
                             name = "profile_pic"
                             type = "text"
@@ -99,10 +101,10 @@ class SignupForm extends React.Component{
                             value = {this.state.profile_pic}
                             onChange = {this.handleInputChange}
                         />
-                    </label>
                     <br />
                     <label className = "sign-label">
                         Age:
+                    </label>
                         <input
                             name = "age"
                             type = "string"
@@ -111,30 +113,30 @@ class SignupForm extends React.Component{
                             value = {this.state.age}
                             onChange = {this.handleInputChange}
                         />
-                    </label>
                     <br />
                     <label className = "sign-label">
                         About:
+                    </label>
                         <textarea
                             name = "about"
                             placeholder = "About"
-                            className = "sign-input"
+                            className = "sign-input sign-text"
                             value = {this.state.about}
                             onChange = {this.handleInputChange}
                         />
-                    </label>
                     <br />
                     <label className = "sign-label">
                         Roommate Preferences:
+                    </label>
                         <textarea
                             name = "roommate_preferences"
                             placeholder = "Roommate Preferences"
-                            className = "sign-input"
+                            className = "sign-input sign-text"
                             value = {this.state.roommate_preferences}
                             onChange = {this.handleInputChange}
                         />
-                    </label>
                     <br />
+                    <hr className = "sign-break"/>
                     <input type = 'submit' value = "Signup" className = "sign-button"/>
                 </form>
             </div>
