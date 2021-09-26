@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import ListingModel from '../models/ListingModel'
 import LocationCard from "../components/LocationCard";
+import '../css/Locations.scss'
 
 class Locations extends React.Component {
     state = {
@@ -37,7 +38,8 @@ class Locations extends React.Component {
             return(
                 <div>
                     {/* i want each listing to link to listings that have the city name */}
-                    <Link to = {`/locations/${cityName}`}>
+                    <Link to = {`/locations/${cityName}`}
+                        className = "loc-link">
                         <LocationCard key = {idx} cityNames = {cityName} />
                     </Link>
                     <br/>
@@ -49,9 +51,9 @@ class Locations extends React.Component {
 
     render() {
         return(
-            <div>
+            <main className = "loc-main">
                 {this.renderCityNames()}
-            </div>
+            </main>
         )
     }
 }

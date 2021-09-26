@@ -6,7 +6,7 @@ $body-font: 'Montserrat', sans-serif;
 $main-color: #E7D2CC;
 $second-color: #868B8E;
 $third-color: #B9B7BD;
-$background-c:  #EEEDE7;
+$background-c:  #EEEDE780;
 
 main {
     box-sizing: border-box;
@@ -30,14 +30,13 @@ main {
     background-size: cover;
 }
 
-
 .hpage-content {
     background: $background-c;
 }
 
 .hpage-title {
     font-family: $title-font;
-    font-size: 12.5rem;
+    font-size: 12rem;
     margin: 0px;
     color: $main-color;
     padding-left: 120px;

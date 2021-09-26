@@ -1,6 +1,7 @@
 import React from 'react'
 import ListingModel from '../models/ListingModel';
 import Listing from '../components/Listing';
+import '../css/ListingsShow.scss'
 
 class ListingsShow extends React.Component {
     state = {
@@ -36,9 +37,9 @@ class ListingsShow extends React.Component {
 
     render() {
         return(
-            <div>
+            <main className = "lis-show-main">
                 {this.renderCities()}
-            </div>
+            </main>
         )
     }
 }
