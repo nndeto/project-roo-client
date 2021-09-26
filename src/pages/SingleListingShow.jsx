@@ -69,17 +69,24 @@ class SingleListingShow extends React.Component {
           return <Redirect to = {`/locations`} />;
         }
 
+        const pictures = this.state.pictures
+        let singleImg = pictures.map((single) => {
+            return(
+                <img src = {single} alt = "" />
+            )
+        })
+
         return(
             <div>
                 <div>
                     <main>
                         <h1>{this.state.title}</h1>
-                        <h2>{this.state.lister}</h2>
-                        <h3>{this.state.description}</h3>
                         <p>${this.state.price}</p>
+                        <h2>{this.state.lister}</h2>
+                        <p>{this.state.description}</p>
                         <p>{this.state.street_address}</p>
                         <p>{this.state.city}, {this.state.state}</p>
-                        <p>{this.state.pictures}</p>
+                        {singleImg}
                     </main>
                     <div>
                         <Link to = {`/update/${listingId}`} >

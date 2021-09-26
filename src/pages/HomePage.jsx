@@ -1,9 +1,19 @@
-//this will be my landing page wireframe
-function HomePage(props) {
+import '../css/HomePage.scss'
+
+function HomePage() {
     // console.log(props)
     return (
         <main>
-            <h1>Roo</h1>
+            <div className = "hpage-content">
+                <h1 className = "hpage-title">Roo</h1>
+            </div>
+            <div className = "hpage-main"></div>
+            <div className = "hpage-wordbox">
+                <p className = "hpage-p">Have an empty <span className = "hpage-accent">roo</span>m?</p>
+                <p className = "hpage-p">In need of a <span className = "hpage-accent">roo</span>mmate?</p>
+                <p className = "hpage-p">Choose <span className = "hpage-accent">roo</span>.</p>
+            </div>
+            <div className = "hpage-filler"></div>
         </main>
     )
 }

@@ -1,1 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat&display=swap');
 
+$body-text: 'Montserrat', sans-serif;
+$link-padding: 0px 20px 0px 20px;
+$font-color: #868B8E;
+$size: 16px;
+$sizeTwo: 18px;
+$align: center;
+$bEffect: 0px 27px 27px 0px;
+$bEffectTwo: 1px solid #868B8E;
+$sEffect: 2px 2px #868B8E;
+$background-c:  #EEEDE7;
+
+
+
+.nav-header {
+    font-family: $body-text;
+    background: $background-c;
+    margin-top: -10px;
+    padding-top: 20px;
+    border-bottom: $bEffectTwo;
+}
+
+li {
+    padding: $link-padding;
+    display: inline;
+}
+
+ .link-style {
+    text-decoration: none; 
+    color: $font-color;
+    font-size: $size;
+    padding: 0px 5px 3px 0px;
+}
+
+.link-style:hover {
+    border-bottom: $bEffectTwo;
+    border-radius: $bEffect;
+    box-shadow: $sEffect;
+    font-size: $sizeTwo;
+}

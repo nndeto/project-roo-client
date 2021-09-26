@@ -2,6 +2,8 @@ import { Link } from "react-router-dom"
 
 function Listing(props) {
     // console.log(props)
+    let singleImg = props.cityObj.pictures[0]
+
     return (
         <div>
             <Link to = {`/location/city/${props.cityObj._id}`}>
@@ -11,10 +13,10 @@ function Listing(props) {
                 <p>{props.cityObj.lister}</p>
             </Link>
             <p>{props.cityObj.description}</p>
-            <p>$ {props.cityObj.price}</p>
+            <p>${props.cityObj.price}</p>
             <p>{props.cityObj.street_address}</p>
             <p>{props.cityObj.city}, {props.cityObj.state} </p>
-            <p>{props.cityObj.pictures}</p>
+            <img src = {singleImg} alt = "" />
         </div>
     )
 }

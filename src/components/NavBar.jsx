@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom'
 import UserModel from '../models/UserModel'
+import '../css/NavBar.scss'
 
 function NavBar(props) {
 
@@ -14,41 +15,73 @@ function NavBar(props) {
         navItems = (
             <>
                 <li>
-                    <Link to={`/profile/${props.currentName}`}>Profile</Link>
+                    <Link 
+                        to={`/profile/${props.currentName}`} 
+                        className = "link-style">
+                            Profile
+                    </Link>
                 </li>
                 <li>
-                    <Link to = "/"><span onClick = {onClick}>Logout</span></Link> 
+                    <Link 
+                        to = "/" 
+                        className = "link-style">
+                            <span onClick = {onClick}>Logout</span>
+                    </Link> 
                 </li>
             </>
         )
     } else  {
         navItems = (
             <li>
-                <Link to = "/login">Login</Link>
+                <Link 
+                    to = "/login" 
+                    className = "link-style">
+                        Login
+                </Link>
             </li>
         )
     }
 
     return(
-        <header>
-            <nav>
-                <ul>
+        <header className = "nav-header">
+            <nav className = "nav-bar">
+                <ul className = "nav-ul">
                     <li>
-                        <Link to = "/">Home</Link>
+                        <Link 
+                            to = "/" 
+                            className = "link-style">
+                                Home
+                        </Link>
                     </li>
                     <li>
                         {/* listing index page */}
-                        <Link to = "/locations">Locations</Link>
+                        <Link   
+                                to = "/locations" 
+                                className = "link-style">
+                                    Locations
+                        </Link>
                     </li>
                     <li>
-                        <Link to = "/add-a-listing">Add a Listing</Link>
+                        <Link 
+                            to = "/add-a-listing" 
+                            className = "link-style">
+                                Add-A-Listing
+                        </Link>
                     </li>
                     <li>
-                        <Link to = "/roommates">Roommates</Link>
+                        <Link 
+                            to = "/roommates" 
+                            className = "link-style">
+                                Roommates
+                        </Link>
                     </li>
                     {navItems}
                     <li>
-                        <Link to = "/frequently-asked-questions">FAQ</Link>
+                        <Link 
+                            to = "/frequently-asked-questions" 
+                            className = "link-style">
+                                FAQ
+                        </Link>
                     </li>
                 </ul>
             </nav>
