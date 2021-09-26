@@ -47,6 +47,18 @@ class UserModel{
         })
     }
 
+    static findAll(){
+        return fetch(url) 
+        .then((response) => {
+            //converts data into something we can use
+            return response.json()
+        })
+        //error handling
+        .catch((err) => {
+            console.log(err);
+        })
+    }
+
     static logMeOut() {
         return fetch(`${url}/logout`)
             //error handling

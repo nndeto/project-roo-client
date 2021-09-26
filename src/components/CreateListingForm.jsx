@@ -4,6 +4,7 @@ import React from 'react'
 class CreateListingForm extends React.Component {
     state = {
         lister: '' || `${this.props.currentName}`,
+        lister_pic: '',
         title: '',
         description: '',
         price: '',
@@ -31,6 +32,7 @@ class CreateListingForm extends React.Component {
         //creates a newListing we can pass our backend based off our form data
         let newListing = {
             lister: this.state.lister,
+            lister_pic: this.state.lister_pic,
             title: this.state.title,
             description: this.state.description,
             price: this.state.price,
@@ -43,6 +45,7 @@ class CreateListingForm extends React.Component {
         // resets our form state after the form has been submitted
         this.setState({
             lister: '',
+            lister_pic: '',
             title: '',
             description: '',
             price: '',
@@ -64,7 +67,19 @@ class CreateListingForm extends React.Component {
                         <input
                             name = "lister"
                             type = "text"
+                            placeholder = "What do we call you?"
                             value = {this.state.lister}
+                            onChange = {this.handleInputChange}
+                        />
+                    </label>
+                    <br />
+                    <label>
+                        Lister Pic:
+                        <input
+                            name = "lister_pic"
+                            type = "text"
+                            placeholder = "optional"
+                            value = {this.state.lister_pic}
                             onChange = {this.handleInputChange}
                         />
                     </label>
@@ -74,6 +89,7 @@ class CreateListingForm extends React.Component {
                         <input
                             name = "title"
                             type = "text"
+                            placeholder = "What do we call your listing?"
                             value = {this.state.title}
                             onChange = {this.handleInputChange}
                         />
@@ -133,6 +149,7 @@ class CreateListingForm extends React.Component {
                         <input
                             name = "pictures"
                             type = "text"
+                            placeholder = "One pic at a time, please!"
                             value = {this.state.pictures}
                             onChange = {this.handleInputChange}
                         />

@@ -3,6 +3,16 @@
 // room-card
 //room-top-left
 
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat&display=swap');
+
+$header-font:'Gochi Hand', cursive;
+$body-font: 'Montserrat', sans-serif;
+$main-color: #646173;
+$second-color: #868B8E;
+$third-color: #B9B7BD;
+$background-c:  #EEEDE780;
+$accent-color: #E7D2CC;
+
 .room-main {
     box-sizing: border-box;
     background: $background-c;
@@ -10,4 +20,28 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    gap: 50px;
 }
+
+.room-link {
+    text-decoration: none;
+    color: $main-color;
+}
+
+.room-card {
+    box-shadow: 0 70px 63px -60px #000000; 
+    position: relative;
+    height: 379px;
+    width: 300px;
+}
+
+.room-top-left{
+    opacity: 1;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 1.2rem;
+    font-family: $body-font;
+    color: $main-color;
+}
+

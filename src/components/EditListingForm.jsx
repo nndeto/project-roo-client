@@ -5,6 +5,7 @@ import ListingModel from '../models/ListingModel';
 class EditListingForm extends React.Component {
     state = {
         lister: '',
+        lister_pic: '',
         title: '',
         description: '',
         price: '',
@@ -22,6 +23,7 @@ class EditListingForm extends React.Component {
             // console.log(data)
             this.setState({
                 lister: data.lister,
+                lister_pic: data.lister_pic,
                 title: data.title,
                 description: data.description,
                 price: data.price,
@@ -63,6 +65,7 @@ class EditListingForm extends React.Component {
         // resets our form state after the form has been submitted
         this.setState({
             lister: '',
+            lister_pic: '',
             title: '',
             description: '',
             price: '',
@@ -85,6 +88,17 @@ class EditListingForm extends React.Component {
                             name = "lister"
                             type = "text"
                             value = {this.state.lister}
+                            onChange = {this.handleInputChange}
+                        />
+                    </label>
+                    <br />
+                    <label>
+                        Lister Pic:
+                        <input
+                            name = "lister_pic"
+                            type = "text"
+                            placeholder = "optional"
+                            value = {this.state.lister_pic}
                             onChange = {this.handleInputChange}
                         />
                     </label>

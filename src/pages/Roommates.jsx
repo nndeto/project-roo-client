@@ -2,23 +2,30 @@ import React from 'react'
 import ListingModel from '../models/ListingModel'
 import { Link } from 'react-router-dom'
 import RoommateCard from '../components/RoommateCard'
+import '../css/Roommate.scss'
+// import UserModel from '../models/UserModel'
 
 class Roommates extends React.Component{
     state = {
-        roommateData: []
+        roommateData: [],
+        imgData: [],
+        imgString: "https://i.imgur.com/WLVUvqFm.jpg"
     }
 
     componentDidMount() {
         ListingModel.all().then((data)=> {
-            // console.log(data)
+            console.log(data)
+            let images = data.map((single) => {
+                return single.lister_pic
+            })
             this.setState({
-                roommateData: data
+                roommateData: data,
+                imgData: images
             })
         })
     }
 
     renderListerNames() {
-        //so i can get just the lister back in an array
         const listerData = this.state.roommateData.map((listerObj) => {
             return listerObj.lister
         })
@@ -28,14 +35,13 @@ class Roommates extends React.Component{
                 <div>
                     <Link to = {`profile/${singleName}`}
                         className = "room-link">
-                        <RoommateCard key = {idx} singleName = {singleName} />
+                        <RoommateCard key = {idx} singleName = {singleName} img = {this.state.imgData[idx]}  />
                     </Link>
                 </div>
             )
         })
         return listerName
     }
-
 
     render() {
         return(

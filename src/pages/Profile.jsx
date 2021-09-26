@@ -36,24 +36,11 @@ class Profile extends React.Component{
                 </div>
             )
         } else if (this.state.message === "Welcome!") {
-            // const allData = Object.keys(this.state.profileData);
-            // console.log(allData)
-            // const profileJSX = allData.map((profileObj, idx) => {
                 return (
                     <div>
                         <ProfileCard profileData = {this.state.profileData} />
                     </div>
                 )
-            // })
-            // return profileJSX
-            // const allData = this.state.profileData.map((profileObj, idx) => {
-            //     return(
-            //         <div>
-            //             <ProfileCard key = {idx} profileObj = {profileObj} />
-            //         </div>
-            //     )
-            // });
-            // return allData
         }
     }
 
