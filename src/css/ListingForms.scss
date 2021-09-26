@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Montserrat&display=swap');
 
+$title-font: 'Alata', sans-serif;
 $body-font: 'Montserrat', sans-serif;
 $main-color: #646173;
 $second-color: #868B8E;
@@ -23,6 +24,7 @@ $hover-font: 1.2rem;
 
 label {
     font-size: 1.2rem;
+    font-family: $title-font;
 }
 
 .list-input, .list-button {
