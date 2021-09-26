@@ -9,19 +9,49 @@ $third-color: #B9B7BD;
 $background-c:  #EEEDE780;
 $accent-color: #E7D2CC;
 
-.lis-show-main {
+img {
+    display: inline-block;
+    width: 100%;
+}
+
+.list-show-main {
     box-sizing: border-box;
     background: $background-c;
     padding: 64px;
-    // display: flex;
-    // flex-flow: row wrap;
-    // justify-content: space-around;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
+.list-show-link, .list-show-link-zero {
+    text-decoration: none;
+    color: $accent-color;
+    text-align: center;
+}
 
-// .lis-show-card {
-//     // display: flex;
-//     // justify-content: center;
-//     // width: 200px;
-//     // height: 200px;
-// }
+.list-show-link-zero {
+    font-size: 1.3rem;
+}
+
+.list-show-link-zero:hover {
+    font-size: 1.4rem;
+}
+
+.list-show-link:hover {
+    font-size: 1.2rem;
+}
+
+.list-show-card {
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    height: 600px;
+    overflow: hidden;
+    white-space: wrap;
+    background: #072626;
+    color: $second-color;
+    font-family: $body-font;
+}
+
+.list-show-content {
+    padding: 10px;
+}

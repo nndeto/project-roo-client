@@ -37,7 +37,7 @@ class ListingsShow extends React.Component {
 
     render() {
         return(
-            <main className = "lis-show-main">
+            <main className = "list-show-main">
                 {this.renderCities()}
             </main>
         )

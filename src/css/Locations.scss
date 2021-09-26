@@ -11,7 +11,7 @@ $accent-color: #E7D2CC;
 
 .loc-main {
     box-sizing: border-box;
-    background-size: cover;
+    background-color: $background-c;
     padding: 64px;
     display: flex;
     flex-flow: row wrap;
@@ -46,4 +46,6 @@ $accent-color: #E7D2CC;
     transform:perspective(800px)     
     rotateY(0deg);
     opacity:1;
+    width: 300px;
+    height: 300px;
 }

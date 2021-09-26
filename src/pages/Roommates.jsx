@@ -26,7 +26,8 @@ class Roommates extends React.Component{
         const listerName = listerData.map((singleName, idx) => {
             return(
                 <div>
-                    <Link to = {`profile/${singleName}`}>
+                    <Link to = {`profile/${singleName}`}
+                        className = "room-link">
                         <RoommateCard key = {idx} singleName = {singleName} />
                     </Link>
                 </div>
@@ -38,9 +39,9 @@ class Roommates extends React.Component{
 
     render() {
         return(
-            <div>
+            <main className = "room-main">
                 {this.renderListerNames()}
-            </div>
+            </main>
         )
     }
 }

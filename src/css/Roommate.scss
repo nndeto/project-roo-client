@@ -1,0 +1,13 @@
+// room-link
+// room-main
+// room-card
+//room-top-left
+
+.room-main {
+    box-sizing: border-box;
+    background: $background-c;
+    padding: 64px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
