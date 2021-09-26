@@ -9,10 +9,12 @@ function ProfileCard(props) {
 
     return(
         <div>
+            <div className = "profile-banner">
                 <img src = {`${imgSrc}` } className = "profile-pic" />
                 <h2 className = "profile-name-person">{props.profileData.name}</h2>
                 <p className = "age">{props.profileData.age}</p>
-            <div className = "profile-social">
+            </div>
+            <div className = "profile-social-loggedin">
                         <a className = "profile-icon"
                             href = "https://www.facebook.com/"
                             target = "_blank">

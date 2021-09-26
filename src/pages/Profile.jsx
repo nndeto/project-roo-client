@@ -68,7 +68,7 @@ class Profile extends React.Component{
 
     render() {
         return(
-            <div className = "profile-main">
+            <div className = "profile-main profile-problem-main">
                 {this.renderProfile()}
             </div>
         )

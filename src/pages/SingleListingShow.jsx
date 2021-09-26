@@ -3,6 +3,7 @@ import ListingModel from '../models/ListingModel'
 import MapContainer from '../components/MapContainer';
 import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
+import '../css/SingleListingShow.scss'
 
 class SingleListingShow extends React.Component {
     state = {
@@ -77,28 +78,28 @@ class SingleListingShow extends React.Component {
         })
 
         return(
-            <div>
+            <div className = "single-main">
+                    {/* {singleImg} */}
+                <div className = "single-content">
+                    <h1 className = "single-title">{this.state.title}</h1>
+                    <h2 className = "single-price">${this.state.price}</h2>
+                    <h3 className = "single-lister">{this.state.lister}</h3>
+                </div>
+                <div className = "single-filler-content">
+                    <p>{this.state.description}</p>
+                    <p>{this.state.street_address}</p>
+                    <p>{this.state.city}, {this.state.state}</p>
+                </div>
+                <div className = "single-buttons">
+                    <Link to = {`/update/${listingId}`} >
+                        <button className = "single-onebtn">Update</button>
+                    </Link>
+                    <button onClick = {this.deleteListing} className = "single-onebtn"> Delete</button>
+                </div>
                 <div>
-                    <main>
-                        <h1>{this.state.title}</h1>
-                        <p>${this.state.price}</p>
-                        <h2>{this.state.lister}</h2>
-                        <p>{this.state.description}</p>
-                        <p>{this.state.street_address}</p>
-                        <p>{this.state.city}, {this.state.state}</p>
-                        {singleImg}
-                    </main>
-                    <div>
-                        <Link to = {`/update/${listingId}`} >
-                            <button>Update</button>
-                        </Link>
-                        <button onClick = {this.deleteListing}> Delete</button>
-                    </div>
-                    <div>
-                        <MapContainer
-                            location = {this.state.location} 
-                        />
-                    </div>
+                    {/* <MapContainer
+                        location = {this.state.location} 
+                    /> */}
                 </div>
             </div>
         )

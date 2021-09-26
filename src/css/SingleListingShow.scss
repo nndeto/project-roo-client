@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Montserrat&display=swap');
+
+$title-font:'Lato', sans-serif;
+$header-font: 'Alata', sans-serif;
+$body-font: 'Montserrat', sans-serif;
+$main-color: #646173;
+$second-color: #868B8E;
+$third-color: #B9B7BD;
+$background-c:  #EEEDE780;
+$accent-color: #E7D2CC;
+$margin-space: 60px;
+
+.single-main {
+    box-sizing: border-box;
+    background-color: $background-c;
+    padding: 64px;
+}
+
+.single-content {
+    margin-bottom: $margin-space;
+    color: $main-color;
+}
+
+.single-title,
+.single-price {
+    font-family: $title-font;
+}
+
+.single-lister {
+    font-family: $title-font;
+}
+
+.single-filler-content{
+    font-family: $body-font;
+    color: $second-color;
+    margin-bottom: $margin-space;
+}
+
+.single-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.single-onebtn {
+    padding: 5px 15px 5px 15px;
+    margin: 0px 30px 0px 30px;
+    color: white;
+    font-size: 1.1rem;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background: #d01616;
+    box-shadow: inset 20px -20px 60px #b11313,
+                inset -20px 20px 60px #ef1919,
+                10px 10px 14px -7px #B9B7BD; 
+}
+
+.single-onebtn:hover {
+    font-size: 1.4rem;
+}
