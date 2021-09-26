@@ -5,7 +5,7 @@ function Listing(props) {
     let singleImg = props.cityObj.pictures[0]
 
     return (
-        <div>
+        <div className = "lis-show-card">
             <Link to = {`/location/city/${props.cityObj._id}`}>
                 <p>{props.cityObj.title}</p>
             </Link>
