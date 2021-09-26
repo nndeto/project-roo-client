@@ -3,13 +3,11 @@ import ListingModel from '../models/ListingModel'
 import { Link } from 'react-router-dom'
 import RoommateCard from '../components/RoommateCard'
 import '../css/Roommate.scss'
-// import UserModel from '../models/UserModel'
 
 class Roommates extends React.Component{
     state = {
         roommateData: [],
         imgData: [],
-        // imgString: "https://i.imgur.com/WLVUvqFm.jpg"
     }
 
     componentDidMount() {

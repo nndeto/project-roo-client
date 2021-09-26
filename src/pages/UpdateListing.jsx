@@ -2,6 +2,7 @@ import React from 'react'
 import EditListingForm from "../components/EditListingForm";
 import { Redirect } from "react-router";
 import ListingModel from '../models/ListingModel';
+import '../css/ListingForms.scss'
 
 class UpdateListing extends React.Component{
     state = {
@@ -30,7 +31,7 @@ class UpdateListing extends React.Component{
         }
 
         return(
-            <div>
+            <div className = "list-main">
                 <EditListingForm
                     listingId = {listingId}
                     updateListing = {this.updateListing}

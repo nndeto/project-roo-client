@@ -1,5 +1,5 @@
 function RoommateCard(props) {
-    console.log(props)
+    // console.log(props)
    let image;
 
    if (props.img === "") {

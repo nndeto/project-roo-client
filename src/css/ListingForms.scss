@@ -7,7 +7,7 @@ $third-color: #B9B7BD;
 $background-c:  #EEEDE780;
 $accent-color: #E7D2CC;
 $margin-space: 30px;
-$hover-font: 1.4rem;
+$hover-font: 1.2rem;
 
 .list-main {
     box-sizing: border-box;
@@ -19,6 +19,10 @@ $hover-font: 1.4rem;
     padding: 64px;
     text-align: center;
     color: $main-color;
+}
+
+label {
+    font-size: 1.2rem;
 }
 
 .list-input, .list-button {

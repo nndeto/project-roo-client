@@ -118,6 +118,7 @@ class CreateListingForm extends React.Component {
                         <input
                             name = "price"
                             type = "number"
+                            placeholder = "No $ needed."
                             className = "list-input"
                             value = {this.state.price}
                             onChange = {this.handleInputChange}
