@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat&display=swap');
+
+$title-font:'Lato', sans-serif;
+$header-font:'Gochi Hand', cursive;
+$body-font: 'Montserrat', sans-serif;
+$main-color: #646173;
+$second-color: #868B8E;
+$third-color: #B9B7BD;
+$background-c:  #EEEDE7;
+$accent-color: #E7D2CC;
+
+.f-main {
+    box-sizing: border-box;
+    background: $background-c;
+    padding: 64px;
+    
+}
+
+
+.f-title {
+    margin: 0px;
+    text-align: center;
+    font-family: $title-font;
+    color: $main-color;
+}
+
+.f-headers {
+    font-family: $header-font;
+    color: $second-color;
+}
+
+.f-answers{
+    font-family: $body-font;
+    color: $third-color;
+    font-weight: bold;
+}
