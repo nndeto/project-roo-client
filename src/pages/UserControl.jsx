@@ -1,7 +1,7 @@
 import React from 'react';
 import Login from './Login';
 import UserModel from '../models/UserModel';
-
+import '../css/Login.scss'
 
 class UserControl extends React.Component{
     state = {

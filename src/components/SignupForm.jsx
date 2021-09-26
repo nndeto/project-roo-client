@@ -51,77 +51,91 @@ class SignupForm extends React.Component{
 
     render() {
         return(
-            <div style = {this.props.style}>
-                <form onSubmit = {this.onFormSubmit}>
-                    <label>
+            <div style = {this.props.style} className = "sign-main">
+                <form onSubmit = {this.onFormSubmit} className = "sign-form">
+                    <label className = "sign-label">
                         Name:
                         <input
                             name = "name"
                             type = "text"
+                            placeholder = "Name"
+                            className = "sign-input"
                             value = {this.state.name}
                             onChange = {this.handleInputChange}
                         />
                     </label>
                     <br />
-                    <label>
+                    <label className = "sign-label">
                         Username:
                         <input
                             name = "username"
                             type = "text"
+                            placeholder = "Username"
+                            className = "sign-input"
                             value = {this.state.username}
                             onChange = {this.handleInputChange}
                         />
                     </label>
                     <br />
-                    <label>
+                    <label className = "sign-label">
                         Password:
                         <input
                             name = "password"
                             type = "text"
+                            placeholder = "Password"
+                            className = "sign-input"
                             value = {this.state.password}
                             onChange = {this.handleInputChange}
                         />
                     </label>
                     <br />
-                    <label>
+                    <label className = "sign-label">
                         Profile Picture:
                         <input
                             name = "profile_pic"
                             type = "text"
+                            placeholder = "Profile Picture"
+                            className = "sign-input"
                             value = {this.state.profile_pic}
                             onChange = {this.handleInputChange}
                         />
                     </label>
                     <br />
-                    <label>
+                    <label className = "sign-label">
                         Age:
                         <input
                             name = "age"
                             type = "string"
+                            placeholder = "Age"
+                            className = "sign-input"
                             value = {this.state.age}
                             onChange = {this.handleInputChange}
                         />
                     </label>
                     <br />
-                    <label>
+                    <label className = "sign-label">
                         About:
                         <textarea
                             name = "about"
+                            placeholder = "About"
+                            className = "sign-input"
                             value = {this.state.about}
                             onChange = {this.handleInputChange}
                         />
                     </label>
                     <br />
-                    <label>
+                    <label className = "sign-label">
                         Roommate Preferences:
                         <textarea
                             name = "roommate_preferences"
+                            placeholder = "Roommate Preferences"
+                            className = "sign-input"
                             value = {this.state.roommate_preferences}
                             onChange = {this.handleInputChange}
                         />
                     </label>
                     <br />
-                    <input type = 'submit' value = "Signup"/>
+                    <input type = 'submit' value = "Signup" className = "sign-button"/>
                 </form>
             </div>
         )

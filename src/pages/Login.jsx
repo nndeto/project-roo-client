@@ -2,7 +2,7 @@ import React from "react";
 import SignupForm from "../components/SignupForm";
 import UserModel from "../models/UserModel";
 import { Redirect } from "react-router";
-
+import '../css/Login.scss'
 
 class Login extends React.Component {
     state = {
@@ -63,25 +63,29 @@ class Login extends React.Component {
         }
 
       return (
-          <div>
+          <div className = "log-main">
             <div style = {this.props.formStyle}>
-                <form onSubmit={this.onSubmit}>
-                    <label>
+                <form onSubmit={this.onSubmit} className = "log-form">
+                    <label className = "log-label">
                         Username:
                     </label>
                     <input 
                         name = "username"
                         type = "text"
+                        placeholder = "Username"
+                        className = "log-input"
                         value = {this.state.username}
                         onChange = {this.handleInputChange}
                     />
                     <br />
-                    <label>
+                    <label className = "log-label">
                         Password:
                     </label>
                     <input 
                         name = "password"
                         type = "text"
+                        placeholder = "Password"
+                        className = "log-input"
                         value = {this.state.password}
                         onChange = {this.handleInputChange}
                     />
@@ -89,14 +93,15 @@ class Login extends React.Component {
                     {this.props.message}
                     <br />
                     <br />
-                    <input type = 'submit' value = "Login"/>
+                    <input type = 'submit' value = "Login" className = "log-button"/>
                 </form>
             </div>
             {/* makes this go away when my signup form is brought up */}
             <div style = {this.props.formStyle}>
-                <p>Don't have an account?</p>
+                <hr className = "log-break"/>
+                <p className = "log-quest">Don't have an account?</p>
                 {/* this button toggles both this state and the other states displays to hide the appropriate forms */}
-                <button onClick = {this.handleClick}>Get One</button>
+                <button onClick = {this.handleClick} className = "log-button">Get One</button>
             </div>
             <div>
                 <SignupForm 
