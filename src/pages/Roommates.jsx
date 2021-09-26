@@ -9,7 +9,7 @@ class Roommates extends React.Component{
     state = {
         roommateData: [],
         imgData: [],
-        imgString: "https://i.imgur.com/WLVUvqFm.jpg"
+        // imgString: "https://i.imgur.com/WLVUvqFm.jpg"
     }
 
     componentDidMount() {

@@ -3,18 +3,21 @@ function RoommateCard(props) {
    let image;
 
    if (props.img === "") {
-       image = "https://i.imgur.com/WLVUvqFm.jpg"
+       image = "https://i.imgur.com/UURwIOh.jpg"
    } else {
        image = props.img
    }
+
     return(
-        <div className = "room-card">
-        {/* // style = {{
-        //     backgroundImage: `url(${props.img})`,
-        //     backgroundPosition: "center", 
-        //     backgroundRepeat: "no-repeat",
-        //     backgroundSize: "300px"}}> */}
-            <img src = {image} alt = "profile-headshot" />
+        <div className = "room-card"
+            style = {{
+            backgroundImage: `url(${image})`, 
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat"   
+        }}
+        >
+            {/* <img src = {image} alt = "profile-headshot" /> */}
             <p className = "room-top-left">{props.singleName}</p>
         </div>
     )

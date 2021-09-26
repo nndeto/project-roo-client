@@ -25,23 +25,27 @@ $accent-color: #E7D2CC;
 
 .room-link {
     text-decoration: none;
-    color: $main-color;
 }
 
 .room-card {
-    box-shadow: 0 70px 63px -60px #000000; 
+    box-shadow: 0px 10px 10px #E7D2CC;; 
     position: relative;
     height: 379px;
+    border-radius: 10px;
     width: 300px;
+    opacity: .6;
+}
+
+.room-card:hover {
+   opacity: 1;
 }
 
 .room-top-left{
-    opacity: 1;
     position: absolute;
     top: 8px;
     left: 16px;
     font-size: 1.2rem;
     font-family: $body-font;
-    color: $main-color;
+    color:$main-color;
+    font-weight: bold;
 }
-
