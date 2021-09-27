@@ -97,8 +97,8 @@ class SingleListingShow extends React.Component {
                 <Carousel
                                 data={data}
                                 time={3000}
-                                width="600px"
-                                height="300px;"
+                                width="800px"
+                                height="200px;"
                                 radius="10px"
                                 slideNumber={false}
                                 automatic={true}

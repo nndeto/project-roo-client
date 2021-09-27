@@ -23,13 +23,17 @@ $margin-space: 40px;
     color: $second-color;
 }
 
+.single-title {
+    margin-top: $margin-space;
+}
+
 .single-title,
 .single-price {
     font-family: $title-font;
 }
 
 .single-price {
-    color: #d01616;
+    color: $accent-color;
 }
 
 .single-lister {
@@ -74,10 +78,8 @@ $margin-space: 40px;
 }
 
 .single-carousel{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    display: flex;
+    justify-content: center;
     margin-bottom: $margin-space;
 }
 
