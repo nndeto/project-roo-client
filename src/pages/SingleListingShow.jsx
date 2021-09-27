@@ -4,6 +4,7 @@ import MapContainer from '../components/MapContainer';
 import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
 import '../css/SingleListingShow.scss'
+import { Carousel } from 'react-carousel-minimal'
 
 class SingleListingShow extends React.Component {
     state = {
@@ -62,28 +63,59 @@ class SingleListingShow extends React.Component {
             console.log(err)
         })
     }
-
+    
     render() {
         const listingId = this.props.match.params.listing
         const { redirect } = this.state;
         if (redirect) {
           return <Redirect to = {`/locations`} />;
         }
-
+        
+        let data = []
         const pictures = this.state.pictures
         let singleImg = pictures.map((single) => {
             return(
-                <img src = {single} alt = "" />
-            )
-        })
+                data.push({image: single, caption:""})
+                // <div
+                // style = {{
+                    //     backgroundImage: `url(${single})`,
+                    //     className: "single-img", 
+                    //     backgroundSize: "cover",
+                    //     backgroundPosition: "center",
+                    //     backgroundRepeat: "no-repeat",   
+                    // }}></div>
+                    )
+                })
+                
+                // <img src = {single} alt = "" className = "single-img"/>
+                // console.log(data)
+                console.log(singleImg)
 
         return(
             <div className = "single-main">
-                    {/* {singleImg} */}
+                <div className = "single-carousel">
+                <Carousel
+                                data={data}
+                                time={3000}
+                                width="600px"
+                                height="300px;"
+                                radius="10px"
+                                slideNumber={false}
+                                automatic={true}
+                                dots={true}
+                                slideImageFit="contain"
+                                style = {{
+                                    overflow: "hidden"
+                                }}
+                            />
+                </div>
                 <div className = "single-content">
                     <h1 className = "single-title">{this.state.title}</h1>
                     <h2 className = "single-price">${this.state.price}</h2>
-                    <h3 className = "single-lister">{this.state.lister}</h3>
+                    <Link to = {`/profile/${this.state.lister}`} 
+                    className = "single-lister">
+                        <h3 className = "single-lister">{this.state.lister}</h3>
+                    </Link>
                 </div>
                 <div className = "single-filler-content">
                     <p>{this.state.description}</p>
@@ -96,10 +128,10 @@ class SingleListingShow extends React.Component {
                     </Link>
                     <button onClick = {this.deleteListing} className = "single-onebtn"> Delete</button>
                 </div>
-                <div>
-                    {/* <MapContainer
+                <div className = "single-map">
+                    <MapContainer
                         location = {this.state.location} 
-                    /> */}
+                    />
                 </div>
             </div>
         )

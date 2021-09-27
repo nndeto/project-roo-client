@@ -1,11 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Montserrat&display=swap');
 
+$title-font:'Lato', sans-serif;
+$header-font: 'Alata', sans-serif;
 $body-font: 'Montserrat', sans-serif;
-$main-color: #646173;
-$second-color: #868B8E;
-$third-color: #B9B7BD;
-$background-c:  #EEEDE780;
-$accent-color: #E7D2CC;
+$accent-color:  #8C4A3B;
+$second-color: #44525F;
+$background-c:  #F2F2F2;
+$spacing: 20px 0px 20px 0px;
+$lightg-color: #868B8E;
+$background-d: #072626;
+$margin-space: 40px;
+
 
 .room-main {
     box-sizing: border-box;
@@ -40,6 +46,6 @@ $accent-color: #E7D2CC;
     left: 16px;
     font-size: 1.2rem;
     font-family: $body-font;
-    color:$main-color;
+    color:$second-color;
     font-weight: bold;
 }

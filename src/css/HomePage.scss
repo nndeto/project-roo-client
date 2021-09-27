@@ -3,42 +3,43 @@
 
 $title-font:'Lato', sans-serif;
 $body-font: 'Alata', sans-serif;
-$main-color: #E7D2CC;
-$second-color: #868B8E;
-$third-color: #B9B7BD;
-$background-c:  #EEEDE780;
+$accent-color:  #8C4A3B;
+$second-color: #44525F;
+$background-c:  #F2F2F2;
 
-main {
+.hpage-main {
+    background: $background-c;
     box-sizing: border-box;
 }
 
-.hpage-main {
-    height: 500px;
+
+.hpage-main-pic {
     background: url('../images/h-opta.jpg');
-    background-attachment: fixed;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
-.hpage-filler {
-    height: 500px;
+.hpage-filler-pic {
     background: url('../images/hpage-filler.jpg');
+}
+
+.hpage-footer-pic {
+    background: url('../images/hpage-footer-pic.jpg')
+}
+
+.hpage-main-pic,
+.hpage-filler-pic,
+.hpage-footer-pic {
+    height: 500px;
     background-attachment: fixed;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.hpage-content {
-    background: $background-c;
 }
 
 .hpage-title {
     font-family: $title-font;
     font-size: 12rem;
     margin: 0px;
-    color: $main-color;
+    color: $accent-color;
     padding-left: 120px;
 }
 
@@ -51,13 +52,23 @@ main {
 }
 
 .hpage-accent {
-    color: $main-color;
+    color: $accent-color;
     font-size: 2rem;
 }
 
 .hpage-wordbox {
-    background: $background-c;
     text-align: right;
     padding-right: 80px;
     padding-bottom: 20px;
+}
+
+.hpage-wordbox-one {
+    text-align: left;
+    padding: 20px 0px 20px 120px;
+}
+
+@media screen and (max-width: 400px) {
+    .hpage-title {
+        padding-left: 0px
+    }
 }

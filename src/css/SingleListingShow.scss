@@ -4,12 +4,13 @@
 $title-font:'Lato', sans-serif;
 $header-font: 'Alata', sans-serif;
 $body-font: 'Montserrat', sans-serif;
-$main-color: #646173;
-$second-color: #868B8E;
-$third-color: #B9B7BD;
-$background-c:  #EEEDE780;
-$accent-color: #E7D2CC;
-$margin-space: 60px;
+$accent-color:  #8C4A3B;
+$second-color: #44525F;
+$background-c:  #F2F2F2;
+$spacing: 20px 0px 20px 0px;
+$lightg-color: #868B8E;
+$background-d: #072626;
+$margin-space: 40px;
 
 .single-main {
     box-sizing: border-box;
@@ -19,7 +20,7 @@ $margin-space: 60px;
 
 .single-content {
     margin-bottom: $margin-space;
-    color: $main-color;
+    color: $second-color;
 }
 
 .single-title,
@@ -27,13 +28,24 @@ $margin-space: 60px;
     font-family: $title-font;
 }
 
+.single-price {
+    color: #d01616;
+}
+
 .single-lister {
     font-family: $title-font;
+    color: $second-color;
+    text-decoration: none;
+}
+
+.single-lister:hover {
+    color: $accent-color;
+    font-size: 1.4rem;
 }
 
 .single-filler-content{
     font-family: $body-font;
-    color: $second-color;
+    color: $lightg-color;
     margin-bottom: $margin-space;
 }
 
@@ -43,19 +55,40 @@ $margin-space: 60px;
 }
 
 .single-onebtn {
+    display: inline-block;
+    margin: 20px 40px;
     padding: 5px 15px 5px 15px;
-    margin: 0px 30px 0px 30px;
-    color: white;
+    color: $background-c;
     font-size: 1.1rem;
     outline: none;
     border: none;
     border-radius: 10px;
-    background: #d01616;
-    box-shadow: inset 20px -20px 60px #b11313,
-                inset -20px 20px 60px #ef1919,
-                10px 10px 14px -7px #B9B7BD; 
+    background:  #44525F;
+    box-shadow: 0px 5px 5px #B9B7BD, 
+        inset 20px -20px 60px #3a4651,
+        inset -20px 20px 60px #4e5e6d;
 }
 
 .single-onebtn:hover {
     font-size: 1.4rem;
+}
+
+.single-carousel{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-bottom: $margin-space;
+}
+
+.single-map {
+    margin-top: $margin-space;
+    border-radius: 10px;
+    background: transparent;
+    text-align: center;
+    margin-bottom: $margin-space;
+}
+
+.map-container {
+    width: 800px;
 }

@@ -1,22 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Montserrat&display=swap');
 
 $body-text: 'Montserrat', sans-serif;
 $link-padding: 0px 20px 0px 20px;
-$font-color: #868B8E;
+$font-color: #44525F;
+$accent-color:  #8C4A3B;
 $size: 16px;
 $sizeTwo: 18px;
 $align: center;
 $bEffect: 0px 27px 27px 0px;
-$bEffectTwo: 1px solid #868B8E;
-$sEffect: 2px 2px #868B8E;
-$background-c:  #EEEDE780;
+$bEffectTwo: 1px solid #B9B7BD;
+$sEffect: 2px 2px #B9B7BD;
+$background-c:  #F2F2F2;
 
 
 
 .nav-header {
     font-family: $body-text;
     background: $background-c;
-    margin-top: -10px;
+    margin-top: -2px;
     padding-top: 20px;
     border-bottom: $bEffectTwo;
 }
@@ -26,7 +27,7 @@ li {
     display: inline;
 }
 
- .link-style {
+.link-style {
     text-decoration: none; 
     color: $font-color;
     font-size: $size;
@@ -38,4 +39,24 @@ li {
     border-radius: $bEffect;
     box-shadow: $sEffect;
     font-size: $sizeTwo;
+}
+
+@media screen and (max-width: 800px) {
+    .link-style {
+        font-size: 12px;
+    }
+
+    .link-style:hover {
+        border: none;
+        box-shadow: none;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .link-style {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+    }
 }

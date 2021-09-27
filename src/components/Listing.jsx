@@ -10,7 +10,7 @@ function Listing(props) {
             <div className = "list-show-content">
                 <Link to = {`/location/city/${props.cityObj._id}`}
                     className = "list-show-link-zero">
-                        <p className = "link">{props.cityObj.title}</p>
+                        <p>{props.cityObj.title}</p>
                 </Link>
                 <Link to = {`/profile/${props.cityObj.lister}`}
                     className = "list-show-link"> 

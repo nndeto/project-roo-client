@@ -4,11 +4,10 @@
 $title-font:'Lato', sans-serif;
 $header-font: 'Alata', sans-serif;
 $body-font: 'Montserrat', sans-serif;
-$main-color: #646173;
-$second-color: #868B8E;
-$third-color: #B9B7BD;
-$background-c:  #EEEDE780;
-$accent-color: #E7D2CC;
+$accent-color:  #8C4A3B;
+$second-color: #44525F;
+$background-c:  #F2F2F2;
+$spacing: 20px 0px 20px 0px;
 
 .f-main {
     box-sizing: border-box;
@@ -16,21 +15,23 @@ $accent-color: #E7D2CC;
     padding: 64px;
 }
 
-
-.f-title {
-    margin: 0px;
-    text-align: center;
-    font-family: $title-font;
-    color: $main-color;
+.f-filler-pic {
+    background: url('../images/hpager.jpg');
+    width: 100%;
+    height: 500px;
+    padding: $spacing;
+    margin: $spacing;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .f-headers {
     font-family: $header-font;
-    color: $second-color;
+    color: $accent-color;
 }
 
 .f-answers{
     font-family: $body-font;
-    color: $third-color;
-    font-weight: bold;
+    color: $second-color;
 }

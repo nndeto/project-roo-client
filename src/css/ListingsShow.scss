@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Montserrat&display=swap');
 
-$header-font:'Gochi Hand', cursive;
+$header-font: 'Alata', sans-serif;
 $body-font: 'Montserrat', sans-serif;
-$main-color: #646173;
-$second-color: #868B8E;
-$third-color: #B9B7BD;
-$background-c:  #EEEDE780;
-$accent-color: #E7D2CC;
-
+$accent-color:  #8C4A3B;
+$second-color: #44525F;
+$lightg-color: #868B8E80;
+$background-c:  #F2F2F2;
+$background-d: #072626;
 img {
     display: inline-block;
     width: 100%;
@@ -23,8 +22,9 @@ img {
 }
 
 .list-show-link, .list-show-link-zero {
+    font-family: $header-font;
     text-decoration: none;
-    color: $accent-color;
+    color: $background-c;
     text-align: center;
 }
 
@@ -34,10 +34,12 @@ img {
 
 .list-show-link-zero:hover {
     font-size: 1.4rem;
+    color: $accent-color;
 }
 
 .list-show-link:hover {
     font-size: 1.2rem;
+    color: $accent-color
 }
 
 .list-show-card {
@@ -47,9 +49,10 @@ img {
     overflow: hidden;
     border-radius: 10px;
     white-space: wrap;
-    background: #072626;
-    color: $second-color;
+    background: $background-d;
+    color: $background-c;
     font-family: $body-font;
+    padding-bottom: 10px;
     box-shadow: 5px 10px 10px #B9B7BD; 
 }
 
