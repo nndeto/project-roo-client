@@ -42,7 +42,7 @@ Our user is anyone who wants a low-fuss experience when searching for a roommate
 * Users can also navigate to a Roommates page that shows all the listers with current listings. 
 
 ## Planned Features
-If we continued to work on our project, we'd like to create solutions for the features listed below:
+With continued work, I'd like to create solutions for the features listed below:
 * User to User Chat
 * Contact Form
 * Favorited Listings on Profile Page
