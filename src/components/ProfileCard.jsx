@@ -8,7 +8,7 @@ function ProfileCard(props) {
     let imgSrc = props.profileData.profile_pic
 
     return(
-        <div>
+        <div className = "profile-main">
             <div className = "profile-banner">
                 <img src = {`${imgSrc}` } className = "profile-pic" />
                 <h2 className = "profile-name-person">{props.profileData.name}</h2>

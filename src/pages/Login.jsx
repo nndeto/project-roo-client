@@ -62,8 +62,9 @@ class Login extends React.Component {
           return <Redirect to = {`/profile/${this.state.signUpRedirectName}`} />;
         }
 
-      return (
-          <div>
+        return (
+            <div>
+            <div className = "login-fill"></div>
             <div className = "log-main" style = {this.props.formStyle}>
                 <div >
                     <form onSubmit={this.onSubmit} className = "log-form">
@@ -104,6 +105,8 @@ class Login extends React.Component {
                     {/* this button toggles both this state and the other states displays to hide the appropriate forms */}
                     <button onClick = {this.handleClick} className = "log-button">Get One</button>
                 </div>
+                <div className = "login-filla"></div>
+                <div className = "login-fillb"></div>
           </div>
                 <div className = "sign-main">
                     <SignupForm 

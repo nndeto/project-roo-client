@@ -35,26 +35,28 @@ class Profile extends React.Component{
         if(this.state.message === "Not signed up.") {
             return(
                 <div>
-                    <h1 className = "profile-title">{this.props.match.params.listerName}, isn't signed up with us.</h1>
-                    <p className = "profile-content">You can reach out to them via their social media.</p>
-                    {/* insert social media links here */}
-                    <div className = "profile-social">
-                        <a className = "profile-icon"
-                            href = "https://www.facebook.com/"
-                            target = "_blank">
-                            <SiFacebook />
-                        </a>
-                        <a className = "profile-icon"
-                            href = "https://www.instagram.com/"
-                            target = "_blank">
-                            <SiInstagram />
-                        </a>
-                        <a className = "profile-icon"
-                            href = "https://twitter.com/"
-                            target = "_blank">
-                            <SiTwitter />
-                        </a>
+                    <div className = "profile-main">
+                        <h1 className = "profile-title">{this.props.match.params.listerName}, isn't signed up with us.</h1>
+                        <p className = "profile-content">You can reach out to them via their social media.</p>
+                        <div className = "profile-social">
+                            <a className = "profile-icon"
+                                href = "https://www.facebook.com/"
+                                target = "_blank">
+                                <SiFacebook />
+                            </a>
+                            <a className = "profile-icon"
+                                href = "https://www.instagram.com/"
+                                target = "_blank">
+                                <SiInstagram />
+                            </a>
+                            <a className = "profile-icon"
+                                href = "https://twitter.com/"
+                                target = "_blank">
+                                <SiTwitter />
+                            </a>
+                        </div>
                     </div>
+                    <div className = "profile-filler"></div>
                 </div>
             )
         } else if (this.state.message === "Welcome!") {
@@ -68,7 +70,7 @@ class Profile extends React.Component{
 
     render() {
         return(
-            <div className = "profile-main profile-problem-main">
+            <div>
                 {this.renderProfile()}
             </div>
         )

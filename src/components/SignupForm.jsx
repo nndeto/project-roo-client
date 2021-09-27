@@ -139,6 +139,8 @@ class SignupForm extends React.Component{
                     <hr className = "sign-break"/>
                     <input type = 'submit' value = "Signup" className = "sign-button"/>
                 </form>
+                <div className = "login-filla"></div>
+                <div className = "login-fillb"></div>
             </div>
         )
     }

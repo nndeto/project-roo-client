@@ -1,25 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Montserrat&display=swap');
 
-$title-font: 'Alata', sans-serif;
+$title-font:'Lato', sans-serif;
+$header-font: 'Alata', sans-serif;
 $body-font: 'Montserrat', sans-serif;
-$main-color: #646173;
-$second-color: #868B8E;
-$third-color: #B9B7BD;
-$background-c:  #EEEDE780;
-$accent-color: #E7D2CC;
-$margin-space: 30px;
-$hover-font: 1.2rem;
+$accent-color:  #8C4A3B;
+$second-color: #44525F;
+$background-c:  #F2F2F2;
+$spacing: 20px 0px 20px 0px;
+$lightg-color: #868B8E;
+$background-d: #072626;
+$margin-space: 40px;
+$hover-font: 1.3rem;
 
 .list-main {
     box-sizing: border-box;
-    background: $background-c;
-    background-size: cover;
+    background: url('../images/form-filler.jpg');
     background-position: center;
-    background-attachment: fixed;
+    background-size: cover;
     font-family: $body-font;
     padding: 64px;
     text-align: center;
-    color: $main-color;
+    color: $second-color;
 }
 
 label {
@@ -34,14 +36,13 @@ label {
 }
 
 .list-input {
-    width: 25%;
+    width: 300px;
     font-size: 1.1rem;
     text-shadow: 2px 2px 2px white;
     margin: 20px;
     border-radius: 10px;
-    background: #e0e0e0;
-    box-shadow:  5px 5px 10px #bebebe,
-                 -5px -5px 10px #ffffff;
+    background: $background-c;
+    box-shadow:  5px 5px 10px #bebebe;
 }
 
 .list-input:hover {
@@ -54,8 +55,8 @@ label {
     font-size: 1.2rem;
     padding: 10px 30px;
     border-radius: 10px;
-    color: $main-color;
-    background: #e0e0e0;
+    color: $second-color;
+    background: $background-c;
     box-shadow: 
     inset 20px 20px 40px #bebebe,
     inset -20px -20px 40px #ffffff;
@@ -63,7 +64,7 @@ label {
 
 .list-button:hover {
     font-size: $hover-font;
-    background: #e0e0e0;
+    background: $background-c;
     box-shadow: 
         10px 0px 14px -7px,
         inset -20px -20px 60px #bebebe,
@@ -71,6 +72,6 @@ label {
 }
 
 .list-text {
-    width: 25%;
+    width: 300px;
     height: 100px;
 }

@@ -4,45 +4,53 @@
 $title-font:'Lato', sans-serif;
 $header-font: 'Alata', sans-serif;
 $body-font: 'Montserrat', sans-serif;
-$main-color: #646173;
-$second-color: #868B8E;
-$third-color: #B9B7BD;
-$background-c:  #EEEDE780;
-$accent-color: #E7D2CC;
-$margin-space: 30px;
+$accent-color:  #8C4A3B;
+$second-color: #44525F;
+$background-c:  #F2F2F2;
+$spacing: 20px 0px 20px 0px;
+$lightg-color: #868B8E;
+$background-d: #072626;
+$margin-space: 40px;
 
-.profile-main,
-.profile-problem-main {
+
+.profile-main {
     box-sizing: border-box;
     background-color: $background-c;
-    padding: 64px;
-    // text-shadow: 2px 2px white;
-    margin: -15px;
+    padding: 64px 64px 20px 64px;
 }
 
-.profile-problem-main {
-    // height: 100vh;
+.profile-filler{
+    background: url('../images/profile-filler.jpg');
+    height: 500px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 
 .profile-name-person {
-    color: $main-color;
+    color: $second-color;
     font: $body-font;
 }
 
 .profile-title {
     font-family: $title-font;
-    color: $main-color;
+    color: $second-color;
     margin: 0px;
 }
 
 .age {
-    color: $main-color;
+    color: $second-color;
     font-family: $body-font;
 }
 
 .profile-content {
     color: $second-color;
     font-family: $body-font;
+    margin-top: $margin-space;
+}
+
+.profile-social {
     margin-top: $margin-space;
 }
 
@@ -65,12 +73,13 @@ $margin-space: 30px;
 
 .profile-bio {
     font-family: $body-font;
-    color: $main-color;
+    color: $second-color;
 }
 
 .profile-headers {
-    color: $second-color;
+    color: $lightg-color;
     font-family: $header-font;
+    margin: 40px 0px;
 }
 
 .profile-banner {

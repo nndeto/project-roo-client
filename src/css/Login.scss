@@ -1,25 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Montserrat&display=swap');
 
 $body-font: 'Montserrat', sans-serif;
-$main-color: #646173;
-$second-color: #868B8E;
-$third-color: #B9B7BD;
-$background-c:  #EEEDE780;
-$accent-color: #E7D2CC;
-$margin-space: 40px;
-$hover-font: 1.3rem;
+$accent-color:  #8C4A3B;
+$second-color: #44525F;
+$background-c:  #F2F2F2;
+$spacing: 20px 0px 20px 0px;
+$lightg-color: #868B8E;
+$background-d: #072626;
+$margin-space: 30px;
+$hover-font: 1.4rem;
 
 .log-main {
     box-sizing: border-box;
     background:$background-c;
     font-family: $body-font;
-    padding: 140px;
     text-align: center;
-    color: $main-color;
+    color: $second-color;
 }
 
 .log-form {
     margin-bottom: $margin-space;
+    padding: $margin-space;
 }
 
 .log-label {
@@ -37,7 +38,7 @@ $hover-font: 1.3rem;
     text-shadow: 2px 2px 2px white;
     margin: 20px;
     border-radius: 10px;
-    background: #e0e0e0;
+    background: $background-c;
     box-shadow:  5px 5px 10px #bebebe,
                  -5px -5px 10px #ffffff;
 }
@@ -47,12 +48,34 @@ $hover-font: 1.3rem;
     font-size: $hover-font;
 }
 
+.login-fill {
+    background: url('../images/login-filler.jpg');
+}
+
+.login-fillb {
+    background: url('../images/login-filler-a.jpg');
+}
+
+.login-filla {
+    background: url('../images/login-fillerb.jpg');
+    margin-top: $margin-space;
+}
+
+.login-fill,
+.login-filla,
+.login-fillb {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+
 .log-button {
     font-size: 1rem;
     padding: 10px 30px;
     border-radius: 10px;
-    color: $main-color;
-    background: #e0e0e0;
+    color: $second-color;
+    background: $background-c;
     box-shadow: 
         inset 20px 20px 40px #bebebe,
         inset -20px -20px 40px #ffffff;
@@ -60,7 +83,7 @@ $hover-font: 1.3rem;
 
 .log-button:hover {
     font-size: $hover-font;
-    background: #e0e0e0;
+    background: $background-c;
     box-shadow: 
         10px 0px 14px -7px,
         inset -20px -20px 60px #bebebe,
@@ -74,6 +97,7 @@ $hover-font: 1.3rem;
 }
 
 .log-break {
+    margin: 30px 0px;
     border: 0;
     height: 1px;
     background-image: 

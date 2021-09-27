@@ -6,7 +6,8 @@ $accent-color:  #8C4A3B;
 $second-color: #44525F;
 $lightg-color: #868B8E80;
 $background-c:  #F2F2F2;
-$background-d: #072626;
+$background-d: #07262680;
+
 img {
     display: inline-block;
     width: 100%;
@@ -43,7 +44,6 @@ img {
 }
 
 .list-show-card {
-    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     height: 600px;
     overflow: hidden;
