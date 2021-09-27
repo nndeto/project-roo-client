@@ -7,6 +7,7 @@ Welcome to Roo, the place where you find your next roommate. Built to help anyon
 * Node.js
 * Javascript
 * Express
+* Express Sessions
 * Mongoose & MongoDB
 * CSS
 * Sass
