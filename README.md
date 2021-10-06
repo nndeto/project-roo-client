@@ -1,6 +1,8 @@
 # Roo
 Welcome to Roo, the place where you find your next roommate. Built to help anyone seeking a roommate. 
 
+Heroku Link: https://roo-client.herokuapp.com/
+
 ## Technologies Used
 * Trello - project planning
 * Figma - app design and mockups
