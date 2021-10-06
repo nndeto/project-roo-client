@@ -1,4 +1,4 @@
-const url = 'http://localhost:4000/listings';
+const url = 'https://roo-server.herokuapp.com/listings';
 
 class ListingModel {
     static all() {
