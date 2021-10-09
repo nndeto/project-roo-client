@@ -41,14 +41,14 @@ Our user is anyone who wants a low-fuss experience when searching for a roommate
 * User can also navigate to a Add a Listing Page where they can add a listing to the site. They don't need to be logged in to add a listing
 * User can signup and login to the Roo community
 * If a User is logged in, the navigation bar changes to offer them the options to logout or view their profile. 
-* A user who has an account with the community will have a profile page that shows their profile picture, bio, and roommate preferences. 
+* A User who has an account with the community will have a profile page that shows their profile picture, bio, and roommate preferences. 
 * Users can also navigate to a Roommates page that shows all the listers with current listings. 
-* When a user clicks on a roommate card on the Roommates page they are taken to a profile page for that rooommate.
+* When a User clicks on a roommate card on the Roommates page they are taken to a profile page for that rooommate.
 
 ## Planned Features
 With continued work, I'd like to create solutions for the features listed below:
 * User to User Chat
-* Contact Form
+* Contact Form on Roommate Pages
 * Favorited Listings on Profile Page
 * Picture Upload for ease
 * Posted Listings on Profile Page
