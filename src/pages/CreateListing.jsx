@@ -12,6 +12,7 @@ class CreateListing extends React.Component {
 
     createListing = (listing) => {
         ListingModel.newListing(listing).then((data)=> {
+            // console.log(data)
             let city = data.city
             this.setState({
                 redirect: true,

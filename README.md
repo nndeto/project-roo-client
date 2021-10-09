@@ -12,7 +12,7 @@ Heroku Link: https://roo-client.herokuapp.com/
 * Express Sessions
 * Mongoose & MongoDB
 * CSS
-* Sass
+* SCSS
 * React
     * React Carousel
     * React Router 
@@ -38,10 +38,12 @@ Our user is anyone who wants a low-fuss experience when searching for a roommate
 * User can select a listing to view further information on or select the name of the lister to be taken to a profile page for the lister
 * On the single listing show page the lister can see a carousel of pictures for that listing, additional details, and a static map with a marker of where the listing is
 * The single listing show page also has an update and delete button for the latter half of CRUD functionality
-* User can also navigate to a Add a Listing Page where they can add a listing to the site, if they're searching for a rooommate. They don't need to be logged in to add a listing
+* User can also navigate to a Add a Listing Page where they can add a listing to the site. They don't need to be logged in to add a listing
 * User can signup and login to the Roo community
-* If a User is logged in the navigation bar changes to offer them the options to logout or view their profile. 
+* If a User is logged in, the navigation bar changes to offer them the options to logout or view their profile. 
+* A user who has an account with the community will have a profile page that shows their profile picture, bio, and roommate preferences. 
 * Users can also navigate to a Roommates page that shows all the listers with current listings. 
+* When a user clicks on a roommate card on the Roommates page they are taken to a profile page for that rooommate.
 
 ## Planned Features
 With continued work, I'd like to create solutions for the features listed below:
@@ -57,4 +59,4 @@ Challenging myself to use React, which I wasn't comfortable with, and coming out
 
 
 ## Challenges
-Learning when to let go of certain features or stop working on something that wasn't going to be ready in time was something I learned. There are a few bugs triggered by gaps in logic as well, where I didn't cover every single possibility, that I hope to go back and fix.  
+Learning when to let go of certain features or stop working on something that wasn't going to be ready in time was something I grappled with before embracing it. Leaning into the fact that I can always come back and work on a project after the presentation date, but for presentation day I need to have the most functional app ready.
