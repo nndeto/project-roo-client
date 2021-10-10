@@ -17,7 +17,7 @@ class SingleListingShow extends React.Component {
         state: '',
         pictures:[],
         location: '',
-        redirect: false,
+        redirect: false
     }
 
     componentDidMount() {
@@ -38,6 +38,7 @@ class SingleListingShow extends React.Component {
             })
             this.setLocation()
         })
+       
     }
 
     //gonna be used to pass location to my map container
@@ -64,50 +65,39 @@ class SingleListingShow extends React.Component {
         })
     }
     
+
     render() {
         const listingId = this.props.match.params.listing
         const { redirect } = this.state;
         if (redirect) {
           return <Redirect to = {`/locations`} />;
         }
-        
-        let data = []
+  
         const pictures = this.state.pictures
+        let data = []
         let singleImg = pictures.map((single) => {
-            return(
-                data.push({image: single, caption:""})
-                // <div
-                // style = {{
-                    //     backgroundImage: `url(${single})`,
-                    //     className: "single-img", 
-                    //     backgroundSize: "cover",
-                    //     backgroundPosition: "center",
-                    //     backgroundRepeat: "no-repeat",   
-                    // }}></div>
-                    )
-                })
+            data.push({image: single, caption:""})
+            return
+            })
                 
-                // <img src = {single} alt = "" className = "single-img"/>
-                // console.log(data)
-                console.log(singleImg)
 
         return(
             <div className = "single-main">
                 <div className = "single-carousel">
                 <Carousel
-                                data={data}
-                                time={3000}
-                                width="800px"
-                                height="200px;"
-                                radius="10px"
-                                slideNumber={false}
-                                automatic={true}
-                                dots={true}
-                                slideImageFit="contain"
-                                style = {{
-                                    overflow: "hidden"
-                                }}
-                            />
+                        data={data}
+                        time={3000}
+                        width="800px"
+                        height="200px;"
+                        radius="10px"
+                        slideNumber={false}
+                        automatic={true}
+                        dots={true}
+                        slideImageFit="contain"
+                        style = {{
+                            overflow: "hidden",
+                        }}
+                    />
                 </div>
                 <div className = "single-content">
                     <h1 className = "single-title">{this.state.title}</h1>

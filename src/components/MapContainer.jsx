@@ -18,7 +18,7 @@ class MapContainer extends React.Component {
             return(response.json())
         })
         .then(data => {
-            console.log(data)
+            // console.log(data)
             longitude = data[0].lon
             latitude = data[0].lat
             this.setState({
