@@ -3,6 +3,10 @@ Welcome to Roo, the place where you find your next roommate. Built to help anyon
 
 Heroku Link: https://roo-client.herokuapp.com/
 
+Demo Username: cquinn
+
+Demo Password: cquinn
+
 ## Technologies Used
 * Trello - project planning
 * Figma - app design and mockups

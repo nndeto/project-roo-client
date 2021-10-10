@@ -37,7 +37,7 @@ function ProfileCard(props) {
                 <h3 className = "profile-headers">Roommate Preferences</h3>
                 <p>{props.profileData.roommate_preferences}</p>
                 <h3 className = "profile-headers">Favorited Listings</h3>
-                <p>{props.profileData.favorite_listings}</p>
+                <p>{props.profileData.favorite_listings}Coming Soon!</p>
             </div>
         </div>
     )
