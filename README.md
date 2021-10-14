@@ -17,6 +17,7 @@ Demo Password: cquinn
 * Mongoose & MongoDB
 * CSS
 * SCSS
+* LocationIQ API
 * React
     * React Carousel
     * React Router 
