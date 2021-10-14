@@ -64,3 +64,4 @@ Challenging myself to use React, which I wasn't comfortable with, and coming out
 
 ## Challenges
 Learning when to let go of certain features or stop working on something that wasn't going to be ready in time was something I grappled with before embracing it. Leaning into the fact that I can always come back and work on a project after the presentation date, but for presentation day I need to have the most functional app ready.
+There's also a bug on my single listing show page. The carousel spreads out all the pictures unless the user clicks on the first picture. I tried several ways to fix it but couldn't get it to work how I wanted, in the end.
